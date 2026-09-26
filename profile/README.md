@@ -11,6 +11,7 @@ Version badges on this page update themselves. Status lines are written by hand 
 **[Agent tooling](#agent-tooling)**
 
 - [prisant-utilities](#prisant-utilities) - eight agent skills for session continuity, decision briefs, peer review, specs, and release planning · *active*
+- [nonfiction-studio](#nonfiction-studio) - a Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript · *pre-1.0*
 - [agent-workspace-tools](#agent-workspace-tools) - `awt`, an offline CLI that moves a project and its Claude Code history together · *pre-release*
 - [agent-plugins](#agent-plugins) - the plugin marketplace to install from · *live*
 
@@ -19,6 +20,7 @@ Version badges on this page update themselves. Status lines are written by hand 
 - [obsidian-tag-visibility](#obsidian-tag-visibility) - hide and flag noisy tags across a vault without editing notes · *stable*
 - [obsidian-vault-collection](#obsidian-vault-collection) - answer-keyed test vaults and starter vaults for PKM methods and roles · *stable*
 - [typora-plugin-outline-view](#typora-plugin-outline-view) - a synchronized outline in Typora's right dock · *released*
+- [typora-plugin-favorite-folders-files](#typora-plugin-favorite-folders-files) - favorite folders and Markdown files one click away in Typora · *early release*
 
 **[Desktop utilities](#desktop-utilities)**
 
@@ -28,6 +30,7 @@ Version badges on this page update themselves. Status lines are written by hand 
 **[3d print models](#3d-print-models)**
 
 - [3d-cable-box-parametric-openscad](#3d-cable-box-parametric-openscad) - a parametric cable box with bed slicing and snap-fit seams · *stable, v2 in RC*
+- [3d-yard-spike-parametric-openscad](#3d-yard-spike-parametric-openscad) - a parametric ground spike for posts and tubing that prints without supports · *no releases yet*
 
 ---
 
@@ -57,6 +60,28 @@ Agent skills for the work around the work: closing a session so tomorrow can pic
 - [v0.5.0](https://github.com/prisant-labs/prisant-utilities/releases/tag/v0.5.0) (Aug 2026): `plab-spec` and `plab-release-plan` now start when you ask in plain words, such as "write the spec", so you no longer need the slash command.
 
 **Status:** actively released, with frequent point releases. Installs from the Prisant Labs marketplace, which sometimes pins one release behind the latest.
+
+### [nonfiction-studio](https://github.com/prisant-labs/nonfiction-studio)
+
+![release](https://img.shields.io/github/v/release/prisant-labs/nonfiction-studio?style=flat-square) ![status](https://img.shields.io/badge/status-pre--1.0-orange?style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/nonfiction-studio?style=flat-square)
+
+Nonfiction Studio turns Claude into a governed studio for writing a non-fiction book. Specialist subagents draft, your book's facts live in plain Markdown files you own, and a deterministic quality gate decides when a chapter is done.
+
+**What's inside:** a Claude Code plugin with 14 skills, 8 subagents, and 9 command-line engines.
+
+- An intake interview that captures your book's thesis, audience, and voice, with the voice measured from your own writing
+- Research that builds an evidence ledger, and drafting that anchors every factual claim to it or tags it `[UNVERIFIED]`
+- An adversarial fact-check pass, and a seven-check quality gate you can also run by hand
+- Endnotes, a bibliography, and index candidates generated from the evidence ledger
+- An AI-use disclosure log that records which agent wrote what
+
+**Recent releases:**
+
+- [v0.1.1](https://github.com/prisant-labs/nonfiction-studio/releases/tag/v0.1.1) (Sep 2026): Skills that run a command-line tool, such as `nfs-quick-scan` and `nfs-tour`, now work after a marketplace install. The update does not touch your book's files.
+- [v0.1.0](https://github.com/prisant-labs/nonfiction-studio/releases/tag/v0.1.0) (Sep 2026): The first public release takes a book from intake interview to a fact-checked manuscript with endnotes, a bibliography, and index candidates.
+- [v0.1.0](https://github.com/prisant-labs/nonfiction-studio/releases/tag/v0.1.0) (Sep 2026): Paste 500 to 1,000 words into `nfs-quick-scan` to get a measured voice profile and a list of claims that need a source, with no project setup.
+
+**Status:** pre-1.0. The core authoring workflow is complete and is tested end to end in the Claude Code CLI on Ubuntu and Windows. Cowork should work the same way but is unverified, and in claude.ai chat only the skills run. Installs from the Prisant Labs marketplace and needs Node 22.12 or later.
 
 ### [agent-workspace-tools](https://github.com/prisant-labs/agent-workspace-tools)
 
@@ -164,6 +189,28 @@ Outline View puts a synchronized heading outline in Typora's right dock, so the 
 
 **Status:** 0.3.1 is released and listed in Typora's Community Plugin marketplace. Supports Windows and macOS.
 
+### [typora-plugin-favorite-folders-files](https://github.com/prisant-labs/typora-plugin-favorite-folders-files)
+
+![release](https://img.shields.io/github/v/release/prisant-labs/typora-plugin-favorite-folders-files?style=flat-square) ![status](https://img.shields.io/badge/status-early%20release-yellow?style=flat-square) ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-555?style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/typora-plugin-favorite-folders-files?style=flat-square)
+
+Favorites keeps your favorite folders and Markdown files one click away in a Typora sidebar panel, alongside Typora's own Recent list.
+
+**What's inside:**
+
+- Favorites for files and folders, organized into groups, with Undo when you remove one
+- A live, read-only view of Typora's Recent list, split into Files and Folders tabs (Windows)
+- Tabbed or stacked layouts, custom, A to Z, or recently opened sorting, and search across names and paths
+- Click to open, Ctrl+click for a new window, and reveal in Explorer or Finder
+- Nothing on disk is ever moved, renamed, or deleted, and nothing is sent over the network
+
+**Recent releases:**
+
+- [0.1.1](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.1.1) (Sep 2026): On Windows, the Recent list now sorts files and folders together by date. As a result, the Recently opened sort order works again.
+- [0.1.0](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.1.0) (Sep 2026): The first public release lets you save favorite files and folders, organize them into groups, and undo a removal.
+- [0.1.0](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.1.0) (Sep 2026): Search finds favorites and recent items by name or path. On Windows, Ctrl+click opens one in a new Typora window.
+
+**Status:** early release, installable from Typora's Plugin Marketplace. Windows is the development platform, where it has been installed and used, though its full native test checklist is still in progress. macOS is supported but not yet tested natively, and the Recent list is Windows only. Needs Community Plugin 2.10.21 or later.
+
 ---
 
 ## Desktop utilities
@@ -238,6 +285,28 @@ A parametric cable management box for 3D printing. Print a preset as-is, or open
 
 **Status:** v1 is the stable release, and v2 is at the release-candidate stage. You don't need any software to print a preset STL. To customize a box, you need OpenSCAD 2021.01 or later with the BOSL2 library, or the standalone bundle attached to each release.
 
+### [3d-yard-spike-parametric-openscad](https://github.com/prisant-labs/3d-yard-spike-parametric-openscad)
+
+![releases](https://img.shields.io/badge/releases-none%20yet-lightgrey?style=flat-square) ![last commit](https://img.shields.io/github/last-commit/prisant-labs/3d-yard-spike-parametric-openscad?style=flat-square) ![license](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey?style=flat-square)
+
+A parametric ground spike that plugs into a square post or round tubing, for staking down signs, solar lights, and garden markers. With one setting on, it prints standing up with no supports and no bridges.
+
+**What's inside:**
+
+- A square or round connector, a solid spike or 2 to 16 spines, and cone, ogive, or chisel tips
+- Retention options: a tie band, grip rings, and a cross hole for a screw
+- A support-free mode that leaves no face overhanging past 45 degrees
+- Five saved presets, from a slip-fit square post to a heavy-duty spike for rocky ground
+- A verification script that renders 29 configurations and measures each mesh
+
+**Recent changes (no releases yet):**
+
+- [v5, untagged](https://github.com/prisant-labs/3d-yard-spike-parametric-openscad/blob/main/README.md#v5): Support-free mode leaves no face steeper than 45 degrees, so the spike prints standing up without supports or bridges.
+- [v5, untagged](https://github.com/prisant-labs/3d-yard-spike-parametric-openscad/blob/main/README.md#v5): Five saved presets load automatically in OpenSCAD, from a slip-fit square post to a heavy-duty spike for rocky ground.
+- [v5, untagged](https://github.com/prisant-labs/3d-yard-spike-parametric-openscad/blob/main/README.md#v5): Certain collar thicknesses no longer export as three separate solids, and clearance fits no longer leave an unsupported ledge.
+
+**Status:** no releases yet, so clone the repository to use it. You need OpenSCAD 2021.01 or later with the BOSL2 library, or you can upload the `.scad` to MakerWorld's Parametric Model Maker. All 29 test configurations pass on both of OpenSCAD's geometry engines.
+
 ---
 
-Each project carries its own license: MIT for most, Apache-2.0 for obsidian-tag-visibility. Issues and pull requests are welcome in each project's own repository.
+Each project carries its own license: MIT for most, Apache-2.0 for obsidian-tag-visibility, and CC BY-NC 4.0 for 3d-yard-spike-parametric-openscad, which remixes a non-commercial design. Issues and pull requests are welcome in each project's own repository.
