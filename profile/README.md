@@ -37,7 +37,7 @@ For people who work with Claude Code or Codex every day.
 
 ### [prisant-utilities](https://github.com/prisant-labs/prisant-utilities)
 
-![release](https://img.shields.io/github/v/release/prisant-labs/prisant-utilities?style=flat-square) ![marketplace pin](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/agent-plugins/main/.claude-plugin/marketplace.json&query=%24..version&label=marketplace&prefix=v&color=blue&style=flat-square) ![status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/prisant-utilities?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/prisant-utilities?style=flat-square) ![marketplace pin](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/agent-plugins/main/.claude-plugin/marketplace.json&query=%24.plugins%5B1%5D.version&label=marketplace&prefix=v&color=blue&style=flat-square) ![status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/prisant-utilities?style=flat-square)
 
 Agent skills for the work around the work: closing a session so tomorrow can pick it up, turning raw thinking into a decision, and carrying a feature from spec to a taggable release.
 
@@ -50,6 +50,12 @@ Agent skills for the work around the work: closing a session so tomorrow can pic
 - `plab-spec` and `plab-release-plan`: numbered, source-cited acceptance criteria, then a release plan that gates the tag
 - `plab-init-project`: scaffolds agent infrastructure into a repo (manual invocation only)
 
+**Recent releases:**
+
+- [v0.5.5](https://github.com/prisant-labs/prisant-utilities/releases/tag/v0.5.5) (Sep 2026): When you resume a session, `plab-continue-session` shows the next action as readable text instead of printing the whole continuation prompt as raw markdown.
+- [v0.5.4](https://github.com/prisant-labs/prisant-utilities/releases/tag/v0.5.4) (Sep 2026): Deep session logs from `plab-wrap-session` now list what the session was least sure of, and what it saw that you may not have.
+- [v0.5.0](https://github.com/prisant-labs/prisant-utilities/releases/tag/v0.5.0) (Aug 2026): `plab-spec` and `plab-release-plan` now start when you ask in plain words, such as "write the spec", so you no longer need the slash command.
+
 **Status:** actively released, with frequent point releases. Installs from the Prisant Labs marketplace, which sometimes pins one release behind the latest.
 
 ### [agent-workspace-tools](https://github.com/prisant-labs/agent-workspace-tools)
@@ -59,6 +65,12 @@ Agent skills for the work around the work: closing a session so tomorrow can pic
 `awt` moves a project folder and brings its Claude Code history with it. Claude Code keys session state to a project's path, so a plain move orphans it. `awt` plans the move, applies it, verifies it, and can roll it back. Deterministic and offline: no LLM, no network.
 
 **What's inside:** a Rust CLI with `doctor`, `scan`, `plan`, `apply`, `verify`, `rollback`, `list`, `archive`, `associate`, and `repair`.
+
+**Recent changes (unreleased):**
+
+- [v1.0.0, unreleased](https://github.com/prisant-labs/agent-workspace-tools/blob/main/CHANGELOG.md#100---unreleased): A move now carries a project's transcripts, history, and plugin state with it. Every run takes a snapshot first and rolls back automatically if verification fails.
+- [v1.0.0, unreleased](https://github.com/prisant-labs/agent-workspace-tools/blob/main/CHANGELOG.md#100---unreleased): `archive` copies transcripts before Claude Code's 30-day auto-delete removes them. `associate` reversibly re-links a retired project's history to a new path.
+- [v1.0.0, unreleased](https://github.com/prisant-labs/agent-workspace-tools/blob/main/CHANGELOG.md#100---unreleased): Unsafe moves, such as one onto an existing folder or across drives, are refused before anything is written. Each refusal explains why and what to do next.
 
 **Status:** pre-release, in active development. v1.0 is feature-complete but not yet tagged, so for now you build it from source with `cargo install`. Windows only.
 
@@ -75,7 +87,13 @@ The Prisant Labs plugin marketplace. Add it once and every plugin published here
 
 **What's inside:** only the catalog. There's a single `marketplace.json`, and each plugin keeps its own repository, versions, and issues.
 
-**Status:** live. prisant-utilities is available now. A second plugin is listed early so the marketplace name stays stable, and it will install once its repository goes public.
+**Recent catalog changes:**
+
+- [Sep 25, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-09-25): [nonfiction-studio](https://github.com/prisant-labs/nonfiction-studio) moved to v0.1.1, which lets its command-line skills find their own tools after a marketplace install. Run `/plugin update nonfiction-studio@prisant-labs` to get it.
+- [Sep 24, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-09-24): nonfiction-studio became installable with `/plugin install nonfiction-studio@prisant-labs`, now that its repository is public.
+- [Aug 26, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-08-26): The marketplace was renamed from `agent-plugins` to `prisant-labs`. An install registered under the old name must be removed and reinstalled.
+
+**Status:** live. Both listed plugins, prisant-utilities and nonfiction-studio, install now.
 
 ---
 
@@ -97,6 +115,12 @@ Hide, flag, and surface noisy tags across your whole vault without modifying a s
 - Five built-in presets, plus custom regex, frequency, and list rules
 - A panic command that turns everything off at once
 
+**Recent releases:**
+
+- [1.0.2](https://github.com/prisant-labs/obsidian-tag-visibility/releases/tag/1.0.2) (Jul 2026): Release files now carry GitHub attestations, so you can verify that a download was built from this repository. Numeric tags in frontmatter are now indexed like any other tag.
+- [1.0.0](https://github.com/prisant-labs/obsidian-tag-visibility/releases/tag/1.0.0) (Jul 2026): You can mark tags as reviewed and filter to the unreviewed ones, so a large tag set can be worked down like an inbox.
+- [1.0.0](https://github.com/prisant-labs/obsidian-tag-visibility/releases/tag/1.0.0) (Jul 2026): Hiding is display-only, so Dataview, Tasks, and Bases still see every tag. Uninstalling the plugin restores every tag everywhere at once.
+
 **Status:** v1.0 has shipped, with v1.1 and v1.2 planned. It isn't in Obsidian's plugin directory yet, so for now you install it with BRAT or manually. Works on desktop and on mobile.
 
 ### [obsidian-vault-collection](https://github.com/prisant-labs/obsidian-vault-collection)
@@ -110,6 +134,12 @@ Ready-made Obsidian vaults: some for testing plugins, some for trying out a note
 - **Testing vaults:** four deterministic vaults of 20, 200, 2,000, and 20,000 notes. Each has an answer key, so a plugin's output can be checked against known truth.
 - **Method vaults:** hand-authored starters for PARA, Zettelkasten, Maps of Content, and GTD.
 - **Role vaults:** starters for a student, a writer, a researcher, and a software developer.
+
+**Recent releases:**
+
+- [v1.0.0](https://github.com/prisant-labs/obsidian-vault-collection/releases/tag/v1.0.0) (Jul 2026): The vault layout and download paths are now stable under semantic versioning. Folder names gained a `-vaults` suffix, so update any older `degit` commands.
+- [v1.0.0](https://github.com/prisant-labs/obsidian-vault-collection/releases/tag/v1.0.0) (Jul 2026): A release now publishes only after every validation check passes. Its privacy scan also checks saved views, canvases, and code blocks for real contact details.
+- [v0.3.0](https://github.com/prisant-labs/obsidian-vault-collection/releases/tag/v0.3.0) (Jul 2026): Four role starter vaults arrived, for a student, a writer, a researcher, and a software developer. Each includes a saved Bases view for a query that role runs.
 
 **Status:** stable since 1.0.0, and still adding vaults. Download a single vault as a zip from Releases. Needs Obsidian 1.9.10 or later.
 
@@ -126,7 +156,13 @@ Outline View puts a synchronized heading outline in Typora's right dock, so the 
 - A choice of selector styles, plus styling for each heading level
 - Commands to toggle, refresh, expand all, and collapse all
 
-**Status:** 0.3.0 is released and listed in Typora's Community Plugin marketplace. A 0.3.1 candidate is in progress on `main`. Supports Windows and macOS.
+**Recent releases:**
+
+- [0.3.1](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.1) (Sep 2026): The settings window now shows your installed version beside the latest published one, plus a button that opens the plugin's local folder.
+- [0.3.0](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.0) (Sep 2026): Long outlines are easier to scan, with optional hierarchy guides and alternating row colors. Both accept custom colors for light and dark themes.
+- [0.3.0](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.0) (Sep 2026): A clickable current-path bar and a focus mode for the current branch help you keep your place. Formatted headings no longer show their markdown markers.
+
+**Status:** 0.3.1 is released and listed in Typora's Community Plugin marketplace. Supports Windows and macOS.
 
 ---
 
@@ -149,6 +185,12 @@ RepoSync is a system tray app that keeps a library of cloned Git repos fresh and
 - Repos that fail three times in a row are paused, not retried forever
 - Colored labels, an activity log, and GitHub release and pull request counts
 
+**Recent releases:**
+
+- [v0.9.0](https://github.com/prisant-labs/repo-sync-tool/releases/tag/v0.9.0) (Jul 2026): The tray menu can check every repo at once, pause or resume all scheduled checks, and reopen recent repos. Closing the window keeps RepoSync running in the tray.
+- [v0.9.0](https://github.com/prisant-labs/repo-sync-tool/releases/tag/v0.9.0) (Jul 2026): You can open a repo's folder, terminal, editor, or GitHub page straight from the app.
+- [v0.9.0](https://github.com/prisant-labs/repo-sync-tool/releases/tag/v0.9.0) (Jul 2026): Any repo can override the global check schedule from its detail panel, and the change takes effect immediately.
+
 **Status:** public beta. The current build is a pre-release with an unsigned Windows installer, so expect a SmartScreen warning. Windows is supported and used daily. macOS is experimental and unsupported.
 
 ### [audiobook-organizer](https://github.com/prisant-labs/audiobook-organizer)
@@ -162,6 +204,12 @@ Scan a messy audiobook library, understand what's in it, and rehearse a tidy-up 
 - A library scan that sorts items into tidy books, loose files, messy names, box sets, bundles, duplicates, and empty folders
 - A dry-run plan you can review, rehearsed in memory before anything touches the disk
 - A self-contained HTML report you can export and share
+
+**Recent changes (unreleased):**
+
+- [v0.6.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#060---unreleased): A new Duplicates screen compares copies byte by byte when you ask, with progress you can stop. It keeps every comparison it finished.
+- [v0.6.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#060---unreleased): You choose which copy to keep, and nothing moves until you confirm that group. Confirmed copies move to an Archive, and undoing the run puts them all back.
+- [v0.6.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#060---unreleased): Duplicates are now found even when a book is split across many files, such as one copy in a single file and another in twelve MP3s.
 
 **Status:** in progress, not a finished tool. Scanning and rehearsing is a working alpha. Applying real changes isn't a complete loop yet. There are no releases or installers, so build it from source on Windows.
 
@@ -181,6 +229,12 @@ A parametric cable management box for 3D printing. Print a preset as-is, or open
 - Optional Gridfinity interfaces
 - A slicing mode that splits the box to fit your print bed, then joins the pieces with tab or snap-fit seams
 - Nine ready-made presets with STLs, and a validation suite covering 65 scenarios
+
+**Recent releases:**
+
+- [v2.0.0-rc.3](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases/tag/v2.0.0-rc.3) (Aug 2026, release candidate): Side openings now start 5 mm above the floor, and `All_Openings_Up=0` restores the old shape. Magnetic lid retention, an edge fillet and chamfer, and a lid-removal relief are new opt-in options.
+- [v1.4.1](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases/tag/v1.4.1) (Aug 2026): All nine presets now live in one file, so pressing F3 in OpenSCAD lists them in the Customizer dropdown. Three preset configs that failed to load now work.
+- [v1.4.0](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases/tag/v1.4.0) (Aug 2026): Sliced boxes can join with snap-fit clips that flex to absorb print error. A missing BOSL2 library now stops with one clear message instead of an empty render.
 
 **Status:** v1 is the stable release, and v2 is at the release-candidate stage. You don't need any software to print a preset STL. To customize a box, you need OpenSCAD 2021.01 or later with the BOSL2 library, or the standalone bundle attached to each release.
 
