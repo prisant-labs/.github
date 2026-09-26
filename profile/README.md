@@ -299,7 +299,7 @@ A parametric ground spike that plugs into a square post or round tubing, for sta
 - Five saved presets, from a slip-fit square post to a heavy-duty spike for rocky ground
 - A verification script that renders 29 configurations and measures each mesh
 
-**Recent changes (no releases yet):**
+**Recent changes (unreleased):**
 
 - [v5, untagged](https://github.com/prisant-labs/3d-yard-spike-parametric-openscad/blob/main/README.md#v5): Support-free mode leaves no face steeper than 45 degrees, so the spike prints standing up without supports or bridges.
 - [v5, untagged](https://github.com/prisant-labs/3d-yard-spike-parametric-openscad/blob/main/README.md#v5): Five saved presets load automatically in OpenSCAD, from a slip-fit square post to a heavy-duty spike for rocky ground.
