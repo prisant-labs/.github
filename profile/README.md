@@ -16,35 +16,56 @@ Prisant Labs is where [@jprisant](https://github.com/jprisant) tinkers, experime
 
 Version badges on this page update themselves. Everything else is written by hand, including a plain status line for each project.
 
-**Status:** 🟢 Stable, meaning 1.0 or later, or a live service · 🟡 Beta, meaning released but not yet 1.0 · 🟠 Pre-release, meaning no release yet, so you build from source · 🟤 Maintenance, meaning it works but is no longer developed
+**Status**
 
-**Tags:** 🚀 Start here · 🆕 New, meaning public for under 30 days · 🧪 Experimental
+- 🟢 **Stable:** 1.0 or later, or a live service
+- 🟡 **Beta:** released, but not yet 1.0
+- 🟠 **Pre-release:** no release yet, so you build from source
+- 🟤 **Maintenance:** works, but no longer developed
+
+**Tags**
+
+- 🚀 **Start here:** the best first project in its category
+- 🆕 **New:** public for under 30 days
+- 🧪 **Experimental:** likely to change, and its status line says how
 
 ## At a glance
 
-**🤖 [Agent tooling](#-agent-tooling)**
+#### Agent tooling
 
-- 🔧 [prisant-utilities](#-prisant-utilities) - eight agent skills for session continuity, decision briefs, peer review, specs, and release planning · 🟡 Beta · 🚀 Start here
-- 📚 [nonfiction-studio](#-nonfiction-studio) - a Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript · 🟡 Beta · 🆕 New
-- 🚚 [agent-workspace-tools](#-agent-workspace-tools) - `awt`, an offline CLI that moves a project and its Claude Code history together · 🟠 Pre-release
-- 🧩 [agent-plugins](#-agent-plugins) - the plugin marketplace to install from · 🟢 Stable
+🔧 **[prisant-utilities](#-prisant-utilities)** · 🟡 Beta · 🚀 Start here<br>Eight agent skills for session continuity, decision briefs, peer review, specs, and release planning
 
-**📝 [Knowledge and writing tools](#-knowledge-and-writing-tools)**
+📚 **[nonfiction-studio](#-nonfiction-studio)** · 🟡 Beta · 🆕 New<br>A Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript
 
-- 🔖 [obsidian-tag-visibility](#-obsidian-tag-visibility) - hide and flag noisy tags across a vault without editing notes · 🟢 Stable · 🚀 Start here
-- 📦 [obsidian-vault-collection](#-obsidian-vault-collection) - answer-keyed test vaults and starter vaults for PKM methods and roles · 🟢 Stable
-- 📑 [typora-plugin-outline-view](#-typora-plugin-outline-view) - a synchronized outline in Typora's right dock · 🟡 Beta · 🆕 New · 🚀 Start here
-- ⭐ [typora-plugin-favorite-folders-files](#-typora-plugin-favorite-folders-files) - favorite folders and Markdown files one click away in Typora · 🟡 Beta · 🆕 New
+🚚 **[agent-workspace-tools](#-agent-workspace-tools)** · 🟠 Pre-release<br>`awt`, an offline CLI that moves a project and its Claude Code history together
 
-**💻 [Desktop utilities](#-desktop-utilities)**
+🧩 **[agent-plugins](#-agent-plugins)** · 🟢 Stable<br>The plugin marketplace to install from
 
-- 🔄 [repo-sync-tool](#-repo-sync-tool) - a tray app that keeps cloned repos fresh without touching your work · 🟡 Beta · 🚀 Start here
-- 🎧 [audiobook-organizer](#-audiobook-organizer) - scan an audiobook library and rehearse a tidy-up before anything moves · 🟠 Pre-release
 
-**🧱 [3D print models](#-3d-print-models)**
+#### Knowledge and writing tools
 
-- 🔌 [3d-cable-box-parametric-openscad](#-3d-cable-box-parametric-openscad) - a parametric cable box with bed slicing and snap-fit seams · 🟢 Stable · 🚀 Start here
-- 🌱 [3d-yard-spike-parametric-openscad](#-3d-yard-spike-parametric-openscad) - a parametric ground spike for posts and tubing that prints without supports · 🟠 Pre-release · 🆕 New
+🔖 **[obsidian-tag-visibility](#-obsidian-tag-visibility)** · 🟢 Stable · 🚀 Start here<br>Hide and flag noisy tags across a vault without editing notes
+
+📦 **[obsidian-vault-collection](#-obsidian-vault-collection)** · 🟢 Stable<br>Answer-keyed test vaults and starter vaults for PKM methods and roles
+
+📑 **[typora-plugin-outline-view](#-typora-plugin-outline-view)** · 🟡 Beta · 🚀 Start here · 🆕 New<br>A synchronized outline in Typora's right dock
+
+⭐ **[typora-plugin-favorite-folders-files](#-typora-plugin-favorite-folders-files)** · 🟡 Beta · 🆕 New<br>Favorite folders and Markdown files one click away in Typora
+
+
+#### Desktop utilities
+
+🔄 **[repo-sync-tool](#-repo-sync-tool)** · 🟡 Beta · 🚀 Start here<br>A tray app that keeps cloned repos fresh without touching your work
+
+🎧 **[audiobook-organizer](#-audiobook-organizer)** · 🟠 Pre-release<br>Scan an audiobook library and rehearse a tidy-up before anything moves
+
+
+#### 3D print models
+
+🔌 **[3d-cable-box-parametric-openscad](#-3d-cable-box-parametric-openscad)** · 🟢 Stable · 🚀 Start here<br>A parametric cable box with bed slicing and snap-fit seams
+
+🌱 **[3d-yard-spike-parametric-openscad](#-3d-yard-spike-parametric-openscad)** · 🟠 Pre-release · 🆕 New<br>A parametric ground spike for posts and tubing that prints without supports
+
 
 ---
 
@@ -56,7 +77,7 @@ For people who work with Claude Code or Codex every day. New here? Start with [p
 
 *🟡 Beta · 🚀 Start here · Claude Code and Codex*
 
-![release](https://img.shields.io/github/v/release/prisant-labs/prisant-utilities?style=flat-square) ![marketplace pin](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/agent-plugins/main/.claude-plugin/marketplace.json&query=%24.plugins%5B1%5D.version&label=marketplace&prefix=v&color=blue&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/prisant-utilities?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/prisant-utilities?display_name=tag&style=flat-square) ![marketplace pin](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/agent-plugins/main/.claude-plugin/marketplace.json&query=%24.plugins%5B1%5D.version&label=marketplace&prefix=v&color=blue&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/prisant-utilities?style=flat-square)
 
 ```
 /plugin marketplace add prisant-labs/agent-plugins
@@ -82,11 +103,13 @@ Pick up tomorrow exactly where today's agent session stopped. These skills cover
 
 **Status:** actively released, with frequent point releases. The marketplace sometimes pins one release behind the latest.
 
+---
+
 ### 📚 [nonfiction-studio](https://github.com/prisant-labs/nonfiction-studio)
 
 *🟡 Beta · 🆕 New · Claude Code*
 
-![release](https://img.shields.io/github/v/release/prisant-labs/nonfiction-studio?style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/nonfiction-studio?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/nonfiction-studio?display_name=tag&style=flat-square) ![marketplace pin](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/agent-plugins/main/.claude-plugin/marketplace.json&query=%24.plugins%5B0%5D.version&label=marketplace&prefix=v&color=blue&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/nonfiction-studio?style=flat-square)
 
 ```
 /plugin marketplace add prisant-labs/agent-plugins
@@ -110,6 +133,8 @@ Write a non-fiction book with Claude without losing track of what is true. Speci
 
 **Status:** the core authoring workflow is complete and is tested end to end in the Claude Code CLI on Ubuntu and Windows. Cowork should work the same way but is unverified, and in claude.ai chat only the skills run. Needs Node 22.12 or later.
 
+---
+
 ### 🚚 [agent-workspace-tools](https://github.com/prisant-labs/agent-workspace-tools)
 
 *🟠 Pre-release · Windows*
@@ -132,6 +157,8 @@ Move a project folder without orphaning its Claude Code history. Claude Code key
 - [v0.1.0, never tagged](https://github.com/prisant-labs/agent-workspace-tools/blob/main/CHANGELOG.md#010---internal-milestone-not-tagged): `doctor` finds stale path references across your Claude Code install, and `scan` shows everything stored for one project. Both only read, and neither writes.
 
 **Status:** in active development. v1.0 is feature-complete but not yet tagged, so for now you build it from source with Rust. Windows only.
+
+---
 
 ### 🧩 [agent-plugins](https://github.com/prisant-labs/agent-plugins)
 
@@ -165,7 +192,7 @@ For Obsidian and Typora users. New here? Obsidian users can start with [obsidian
 
 *🟢 Stable · 🚀 Start here · Obsidian desktop and mobile*
 
-![release](https://img.shields.io/github/v/release/prisant-labs/obsidian-tag-visibility?style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/obsidian-tag-visibility?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/obsidian-tag-visibility?display_name=tag&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/obsidian-tag-visibility?style=flat-square)
 
 **Get it:** install the BRAT plugin, choose **Add Beta Plugin**, and enter `https://github.com/prisant-labs/obsidian-tag-visibility`.
 
@@ -186,11 +213,13 @@ Hide, flag, and surface noisy tags across your whole vault without modifying a s
 
 **Status:** v1.0 has shipped, with v1.1 and v1.2 planned. It isn't in Obsidian's plugin directory yet, so for now you install it with BRAT or manually. Works on desktop and on mobile.
 
+---
+
 ### 📦 [obsidian-vault-collection](https://github.com/prisant-labs/obsidian-vault-collection)
 
 *🟢 Stable · Obsidian 1.9.10 or later*
 
-![release](https://img.shields.io/github/v/release/prisant-labs/obsidian-vault-collection?style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/obsidian-vault-collection?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/obsidian-vault-collection?display_name=tag&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/obsidian-vault-collection?style=flat-square)
 
 **Get it:** download any vault as a zip from the [latest release](https://github.com/prisant-labs/obsidian-vault-collection/releases/latest), then open the unzipped folder as a vault in Obsidian.
 
@@ -210,11 +239,13 @@ Try a note-taking method before you commit to it, or test a plugin against a vau
 
 **Status:** stable since 1.0.0, and still adding vaults.
 
+---
+
 ### 📑 [typora-plugin-outline-view](https://github.com/prisant-labs/typora-plugin-outline-view)
 
-*🟡 Beta · 🆕 New · 🚀 Start here · Typora on Windows and macOS*
+*🟡 Beta · 🚀 Start here · 🆕 New · Typora on Windows and macOS*
 
-![release](https://img.shields.io/github/v/release/prisant-labs/typora-plugin-outline-view?style=flat-square) ![version on main](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/typora-plugin-outline-view/main/src/manifest.json&query=%24.version&label=main&prefix=v&color=orange&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/typora-plugin-outline-view?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/typora-plugin-outline-view?display_name=tag&style=flat-square) ![version on main](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/typora-plugin-outline-view/main/src/manifest.json&query=%24.version&label=main&prefix=v&color=orange&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/typora-plugin-outline-view?style=flat-square)
 
 **Get it:** in Community Plugin settings, open **Marketplace** and search for **Outline View**.
 
@@ -235,11 +266,13 @@ Keep the Files panel open and still navigate by heading. Outline View puts a syn
 
 **Status:** listed in Typora's Community Plugin marketplace. Supports Windows and macOS, and needs Community Plugin 2.10.21 or later.
 
+---
+
 ### ⭐ [typora-plugin-favorite-folders-files](https://github.com/prisant-labs/typora-plugin-favorite-folders-files)
 
 *🟡 Beta · 🆕 New · Typora on Windows and macOS*
 
-![release](https://img.shields.io/github/v/release/prisant-labs/typora-plugin-favorite-folders-files?style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/typora-plugin-favorite-folders-files?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/typora-plugin-favorite-folders-files?display_name=tag&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/typora-plugin-favorite-folders-files?style=flat-square)
 
 **Get it:** in Typora's **Plugin Marketplace**, search for **Favorites**, install it, and enable it under **Installed Plugins**.
 
@@ -270,7 +303,7 @@ Local-first Windows desktop apps built with Rust and Tauri. New here? Start with
 
 *🟡 Beta · 🚀 Start here · Windows*
 
-![release](https://img.shields.io/github/v/release/prisant-labs/repo-sync-tool?include_prereleases&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/repo-sync-tool?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/repo-sync-tool?display_name=tag&include_prereleases&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/repo-sync-tool?style=flat-square)
 
 **Get it:** download the Windows installer from the [Releases page](https://github.com/prisant-labs/repo-sync-tool/releases). Expect a SmartScreen warning, because the installer is unsigned.
 
@@ -290,6 +323,8 @@ Keep a whole library of cloned repos fresh without risking your work. RepoSync i
 - [v0.9.0](https://github.com/prisant-labs/repo-sync-tool/releases/tag/v0.9.0) (Jul 2026): The first release adds a tray menu that checks every repo at once, pauses all scheduled checks, and reopens recent repos. It also opens any repo's folder, terminal, editor, or GitHub page.
 
 **Status:** public beta. The current build is a pre-release with an unsigned Windows installer. Windows is supported and used daily. macOS is experimental and unsupported.
+
+---
 
 ### 🎧 [audiobook-organizer](https://github.com/prisant-labs/audiobook-organizer)
 
@@ -330,7 +365,7 @@ Parametric models you can print as they are or reshape in OpenSCAD. New here? St
 
 *🟢 Stable · 🚀 Start here · OpenSCAD with BOSL2*
 
-![release](https://img.shields.io/github/v/release/prisant-labs/3d-cable-box-parametric-openscad?label=stable&style=flat-square) ![next](https://img.shields.io/github/v/release/prisant-labs/3d-cable-box-parametric-openscad?include_prereleases&label=next&color=orange&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/3d-cable-box-parametric-openscad?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/3d-cable-box-parametric-openscad?display_name=tag&label=stable&style=flat-square) ![next](https://img.shields.io/github/v/release/prisant-labs/3d-cable-box-parametric-openscad?display_name=tag&include_prereleases&label=next&color=orange&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/3d-cable-box-parametric-openscad?style=flat-square)
 
 **Get it:** download a preset STL from the [`library/` folder](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/tree/main/library) or the [Releases page](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases). You need nothing beyond your slicer.
 
@@ -350,6 +385,8 @@ Hide a desk's cable clutter in a box sized to your own setup. Print a preset as 
 - [v1.4.0](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases/tag/v1.4.0) (Aug 2026): Sliced boxes can join with snap-fit clips that flex to absorb print error. A missing BOSL2 library now stops with one clear message instead of an empty render.
 
 **Status:** v1 is the stable release, and v2 is at the release-candidate stage. To customize a box, you need OpenSCAD 2021.01 or later with the BOSL2 library, or the standalone bundle attached to each release.
+
+---
 
 ### 🌱 [3d-yard-spike-parametric-openscad](https://github.com/prisant-labs/3d-yard-spike-parametric-openscad)
 
