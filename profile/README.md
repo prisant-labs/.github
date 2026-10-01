@@ -31,40 +31,40 @@ Version badges on this page update themselves. Everything else is written by han
 
 ## At a glance
 
-#### Agent tooling
+### Agent tooling
 
-🔧 **[prisant-utilities](#-prisant-utilities)** · 🟡 Beta · 🚀 Start here<br>Eight agent skills for session continuity, decision briefs, peer review, specs, and release planning
+- 🔧 **[prisant-utilities](#-prisant-utilities)** · 🟡 Beta · 🚀 Start here<br>Eight agent skills for session continuity, decision briefs, peer review, specs, and release planning
 
-📚 **[nonfiction-studio](#-nonfiction-studio)** · 🟡 Beta · 🆕 New<br>A Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript
+- 📚 **[nonfiction-studio](#-nonfiction-studio)** · 🟡 Beta · 🆕 New<br>A Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript
 
-🚚 **[agent-workspace-tools](#-agent-workspace-tools)** · 🟠 Pre-release<br>`awt`, an offline CLI that moves a project and its Claude Code history together
+- 🚚 **[agent-workspace-tools](#-agent-workspace-tools)** · 🟠 Pre-release<br>`awt`, an offline CLI that moves a project and its Claude Code history together
 
-🧩 **[agent-plugins](#-agent-plugins)** · 🟢 Stable<br>The plugin marketplace to install from
-
-
-#### Knowledge and writing tools
-
-🔖 **[obsidian-tag-visibility](#-obsidian-tag-visibility)** · 🟢 Stable · 🚀 Start here<br>Hide and flag noisy tags across a vault without editing notes
-
-📦 **[obsidian-vault-collection](#-obsidian-vault-collection)** · 🟢 Stable<br>Answer-keyed test vaults and starter vaults for PKM methods and roles
-
-📑 **[typora-plugin-outline-view](#-typora-plugin-outline-view)** · 🟡 Beta · 🚀 Start here · 🆕 New<br>A synchronized outline in Typora's right dock
-
-⭐ **[typora-plugin-favorite-folders-files](#-typora-plugin-favorite-folders-files)** · 🟡 Beta · 🆕 New<br>Favorite folders and Markdown files one click away in Typora
+- 🧩 **[agent-plugins](#-agent-plugins)** · 🟢 Stable<br>The plugin marketplace to install from
 
 
-#### Desktop utilities
+### Knowledge and writing tools
 
-🔄 **[repo-sync-tool](#-repo-sync-tool)** · 🟡 Beta · 🚀 Start here<br>A tray app that keeps cloned repos fresh without touching your work
+- 🔖 **[obsidian-tag-visibility](#-obsidian-tag-visibility)** · 🟢 Stable · 🚀 Start here<br>Hide and flag noisy tags across a vault without editing notes
 
-🎧 **[audiobook-organizer](#-audiobook-organizer)** · 🟠 Pre-release<br>Scan an audiobook library and rehearse a tidy-up before anything moves
+- 📦 **[obsidian-vault-collection](#-obsidian-vault-collection)** · 🟢 Stable<br>Answer-keyed test vaults and starter vaults for PKM methods and roles
+
+- 📑 **[typora-plugin-outline-view](#-typora-plugin-outline-view)** · 🟡 Beta · 🚀 Start here · 🆕 New<br>A synchronized outline in Typora's right dock
+
+- ⭐ **[typora-plugin-favorite-folders-files](#-typora-plugin-favorite-folders-files)** · 🟡 Beta · 🆕 New<br>Favorite folders and Markdown files one click away in Typora
 
 
-#### 3D print models
+### Desktop utilities
 
-🔌 **[3d-cable-box-parametric-openscad](#-3d-cable-box-parametric-openscad)** · 🟢 Stable · 🚀 Start here<br>A parametric cable box with bed slicing and snap-fit seams
+- 🔄 **[repo-sync-tool](#-repo-sync-tool)** · 🟡 Beta · 🚀 Start here<br>A tray app that keeps cloned repos fresh without touching your work
 
-🌱 **[3d-yard-spike-parametric-openscad](#-3d-yard-spike-parametric-openscad)** · 🟠 Pre-release · 🆕 New<br>A parametric ground spike for posts and tubing that prints without supports
+- 🎧 **[audiobook-organizer](#-audiobook-organizer)** · 🟠 Pre-release<br>Scan an audiobook library and rehearse a tidy-up before anything moves
+
+
+### 3D print models
+
+- 🔌 **[3d-cable-box-parametric-openscad](#-3d-cable-box-parametric-openscad)** · 🟢 Stable · 🚀 Start here<br>A parametric cable box with bed slicing and snap-fit seams
+
+- 🌱 **[3d-yard-spike-parametric-openscad](#-3d-yard-spike-parametric-openscad)** · 🟠 Pre-release · 🆕 New<br>A parametric ground spike for posts and tubing that prints without supports
 
 
 ---
