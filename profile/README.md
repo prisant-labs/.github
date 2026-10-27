@@ -35,7 +35,7 @@ Version badges on this page update themselves. Everything else is written by han
 
 - 🔧 **[prisant-powertools](#-prisant-powertools)** · 🟡 Beta · 🚀 Start here<br>Ten agent skills for session continuity, decision briefs, peer review, specs, and release planning
 
-- 📚 **[nonfiction-studio](#-nonfiction-studio)** · 🟡 Beta · 🆕 New<br>A Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript
+- 📚 **[nonfiction-studio](#-nonfiction-studio)** · 🟡 Beta<br>A Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript
 
 - 🚚 **[agent-workspace-tools](#-agent-workspace-tools)** · 🟠 Pre-release<br>`awt`, an offline CLI that moves a project and its Claude Code history together
 
@@ -62,14 +62,14 @@ Version badges on this page update themselves. Everything else is written by han
 
 ### Web and site tools
 
-- 🌐 **[starlight-visual-customizer](#-starlight-visual-customizer)** · 🟡 Beta · 🚀 Start here<br>Design a Starlight docs theme visually, then export one CSS file
+- 🎨 **[starlight-visual-customizer](#-starlight-visual-customizer)** · 🟡 Beta · 🚀 Start here<br>Design a Starlight docs theme visually, then export one CSS file
 
 
 ### 3D print models
 
 - 🔌 **[3d-cable-box-parametric-openscad](#-3d-cable-box-parametric-openscad)** · 🟢 Stable · 🚀 Start here<br>A parametric cable box with bed slicing and snap-fit seams
 
-- 🌱 **[3d-yard-spike-parametric-openscad](#-3d-yard-spike-parametric-openscad)** · 🟠 Pre-release · 🆕 New<br>A parametric ground spike for posts and tubing that prints without supports
+- 🌱 **[3d-yard-spike-parametric-openscad](#-3d-yard-spike-parametric-openscad)** · 🟠 Pre-release<br>A parametric ground spike for posts and tubing that prints without supports
 
 
 ---
@@ -112,7 +112,7 @@ Pick up tomorrow exactly where today's agent session stopped. These skills cover
 
 ### 📚 [nonfiction-studio](https://github.com/prisant-labs/nonfiction-studio)
 
-*🟡 Beta · 🆕 New · Claude Code*
+*🟡 Beta · Claude Code*
 
 ![release](https://img.shields.io/github/v/release/prisant-labs/nonfiction-studio?display_name=tag&style=flat-square) ![marketplace pin](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/agent-plugins/main/.claude-plugin/marketplace.json&query=%24.plugins%5B0%5D.version&label=marketplace&prefix=v&color=blue&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/nonfiction-studio?style=flat-square)
 
@@ -369,7 +369,7 @@ See what is wrong with a messy audiobook library, and rehearse the tidy-up befor
 
 A browser-based tool for people who run a Starlight documentation site. New here? Start with [Starlight Visual Customizer](#-starlight-visual-customizer).
 
-### 🌐 [starlight-visual-customizer](https://github.com/prisant-labs/starlight-visual-customizer)
+### 🎨 [starlight-visual-customizer](https://github.com/prisant-labs/starlight-visual-customizer)
 
 *🟡 Beta · 🚀 Start here · Browser, no install*
 
@@ -430,7 +430,7 @@ Hide a desk's cable clutter in a box sized to your own setup. Print a preset as 
 
 ### 🌱 [3d-yard-spike-parametric-openscad](https://github.com/prisant-labs/3d-yard-spike-parametric-openscad)
 
-*🟠 Pre-release · 🆕 New · OpenSCAD with BOSL2*
+*🟠 Pre-release · OpenSCAD with BOSL2*
 
 ![last commit](https://img.shields.io/github/last-commit/prisant-labs/3d-yard-spike-parametric-openscad?style=flat-square) ![license](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey?style=flat-square)
 
