@@ -33,9 +33,9 @@ Version badges on this page update themselves. Everything else is written by han
 
 ### Agent tooling
 
-- 🔧 **[prisant-utilities](#-prisant-utilities)** · 🟡 Beta · 🚀 Start here<br>Eight agent skills for session continuity, decision briefs, peer review, specs, and release planning
+- 🔧 **[prisant-powertools](#-prisant-powertools)** · 🟡 Beta · 🚀 Start here<br>Ten agent skills for session continuity, decision briefs, peer review, specs, and release planning
 
-- 📚 **[nonfiction-studio](#-nonfiction-studio)** · 🟡 Beta · 🆕 New<br>A Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript
+- 📚 **[nonfiction-studio](#-nonfiction-studio)** · 🟡 Beta<br>A Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript
 
 - 🚚 **[agent-workspace-tools](#-agent-workspace-tools)** · 🟠 Pre-release<br>`awt`, an offline CLI that moves a project and its Claude Code history together
 
@@ -48,9 +48,9 @@ Version badges on this page update themselves. Everything else is written by han
 
 - 📦 **[obsidian-vault-collection](#-obsidian-vault-collection)** · 🟢 Stable<br>Answer-keyed test vaults and starter vaults for PKM methods and roles
 
-- 📑 **[typora-plugin-outline-view](#-typora-plugin-outline-view)** · 🟡 Beta · 🚀 Start here · 🆕 New<br>A synchronized outline in Typora's right dock
+- 📑 **[typora-plugin-outline-view](#-typora-plugin-outline-view)** · 🟡 Beta · 🚀 Start here<br>A synchronized outline in Typora's right dock
 
-- ⭐ **[typora-plugin-favorite-folders-files](#-typora-plugin-favorite-folders-files)** · 🟡 Beta · 🆕 New<br>Favorite folders and Markdown files one click away in Typora
+- ⭐ **[typora-plugin-favorite-folders-files](#-typora-plugin-favorite-folders-files)** · 🟡 Beta<br>Favorite folders and Markdown files one click away in Typora
 
 
 ### Desktop utilities
@@ -60,46 +60,51 @@ Version badges on this page update themselves. Everything else is written by han
 - 🎧 **[audiobook-organizer](#-audiobook-organizer)** · 🟠 Pre-release<br>Scan an audiobook library and rehearse a tidy-up before anything moves
 
 
+### Web and site tools
+
+- 🎨 **[starlight-visual-customizer](#-starlight-visual-customizer)** · 🟡 Beta · 🚀 Start here<br>Design a Starlight docs theme visually, then export one CSS file
+
+
 ### 3D print models
 
 - 🔌 **[3d-cable-box-parametric-openscad](#-3d-cable-box-parametric-openscad)** · 🟢 Stable · 🚀 Start here<br>A parametric cable box with bed slicing and snap-fit seams
 
-- 🌱 **[3d-yard-spike-parametric-openscad](#-3d-yard-spike-parametric-openscad)** · 🟠 Pre-release · 🆕 New<br>A parametric ground spike for posts and tubing that prints without supports
+- 🌱 **[3d-yard-spike-parametric-openscad](#-3d-yard-spike-parametric-openscad)** · 🟠 Pre-release<br>A parametric ground spike for posts and tubing that prints without supports
 
 
 ---
 
 ## 🤖 Agent tooling
 
-For people who work with Claude Code or Codex every day. New here? Start with [prisant-utilities](#-prisant-utilities).
+For people who work with Claude Code or Codex every day. New here? Start with [prisant-powertools](#-prisant-powertools).
 
-### 🔧 [prisant-utilities](https://github.com/prisant-labs/prisant-utilities)
+### 🔧 [prisant-powertools](https://github.com/prisant-labs/prisant-powertools)
 
 *🟡 Beta · 🚀 Start here · Claude Code and Codex*
 
-![release](https://img.shields.io/github/v/release/prisant-labs/prisant-utilities?display_name=tag&style=flat-square) ![marketplace pin](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/agent-plugins/main/.claude-plugin/marketplace.json&query=%24.plugins%5B1%5D.version&label=marketplace&prefix=v&color=blue&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/prisant-utilities?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/prisant-powertools?display_name=tag&style=flat-square) ![marketplace pin](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/agent-plugins/main/.claude-plugin/marketplace.json&query=%24.plugins%5B1%5D.version&label=marketplace&prefix=v&color=blue&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/prisant-powertools?style=flat-square)
 
 ```
 /plugin marketplace add prisant-labs/agent-plugins
-/plugin install prisant-utilities@prisant-labs
+/plugin install prisant-powertools@prisant-labs
 ```
 
-Pick up tomorrow exactly where today's agent session stopped. These skills cover the work around the work. They close a session cleanly, turn raw thinking into a decision, and carry a feature from spec to a taggable release.
+Pick up tomorrow exactly where today's agent session stopped. These skills cover the work around the work. They close a session cleanly, turn raw thinking into a decision, and carry a feature from spec to a taggable release. The plugin was renamed from prisant-utilities to prisant-powertools; GitHub redirects the old links.
 
-**What's inside:** eight skills, all prefixed `plab-`, for Claude Code and Codex.
+**What's inside:** ten skills, all prefixed `plab-`, for Claude Code and Codex.
 
 - `plab-wrap-session` and `plab-continue-session`: a matched pair that writes a structured session log, then resumes from it
-- `plab-strategy-brief`: turns a brain dump into a decision-ready analysis
-- `plab-guide`: builds a guide bundle (Markdown, an ADHD-formatted variant, a quick-reference HTML page, and a short PDF)
+- `plab-strategy-brief` and `plab-guide`: turn a brain dump into a decision-ready analysis, or build a guide bundle (Markdown, an ADHD-formatted variant, a quick-reference HTML page, and a short PDF)
 - `plab-ai-review`: runs a structured peer review of a document with a second model
 - `plab-spec` and `plab-release-plan`: numbered, source-cited acceptance criteria, then a release plan that gates the tag
-- `plab-init-project`: scaffolds agent infrastructure into a repo (manual invocation only)
+- `plab-resolve-open-items`: walks through a session's open questions and decisions, and writes each answer back to its home document
+- `plab-init-project` and `plab-audit`: scaffold agent infrastructure into a repo, or audit one into a five-file bundle with a ranked roadmap (manual invocation only)
 
 **Recent releases:**
 
-- [v0.5.5](https://github.com/prisant-labs/prisant-utilities/releases/tag/v0.5.5) (Sep 2026): When you resume a session, `plab-continue-session` shows the next action as readable text instead of printing the whole continuation prompt as raw markdown.
-- [v0.5.4](https://github.com/prisant-labs/prisant-utilities/releases/tag/v0.5.4) (Sep 2026): Deep session logs from `plab-wrap-session` now list what the session was least sure of, and what it saw that you may not have.
-- [v0.5.3](https://github.com/prisant-labs/prisant-utilities/releases/tag/v0.5.3) (Sep 2026): The skills no longer send you to a plugin that ships separately. A release-plan check that named a command you might not have now names a template that ships with the skills.
+- [v0.9.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.9.0) (Oct 2026): The plugin is renamed from prisant-utilities to prisant-powertools. Move an existing install by installing `prisant-powertools@prisant-labs`, then uninstalling `prisant-utilities@prisant-labs`.
+- [v0.8.1](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.8.1) (Oct 2026): `plab-release-plan` returns to manual invocation only, and several `plab-wrap-session` bugs are fixed, including a crash on a non-UTF-8 byte on Windows.
+- [v0.8.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.8.0) (Oct 2026): Adds the tenth skill, `plab-resolve-open-items`, plus a `--backlog` sweep that walks every open item across the whole repository.
 
 **Status:** actively released, with frequent point releases. The marketplace sometimes pins one release behind the latest.
 
@@ -107,7 +112,7 @@ Pick up tomorrow exactly where today's agent session stopped. These skills cover
 
 ### 📚 [nonfiction-studio](https://github.com/prisant-labs/nonfiction-studio)
 
-*🟡 Beta · 🆕 New · Claude Code*
+*🟡 Beta · Claude Code*
 
 ![release](https://img.shields.io/github/v/release/prisant-labs/nonfiction-studio?display_name=tag&style=flat-square) ![marketplace pin](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/agent-plugins/main/.claude-plugin/marketplace.json&query=%24.plugins%5B0%5D.version&label=marketplace&prefix=v&color=blue&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/nonfiction-studio?style=flat-square)
 
@@ -125,13 +130,15 @@ Write a non-fiction book with Claude without losing track of what is true. Speci
 - An adversarial fact-check pass, and a seven-check quality gate you can also run by hand
 - Endnotes, a bibliography, and index candidates generated from the evidence ledger
 - An AI-use disclosure log that records which agent wrote what
+- Adopt a manuscript you already started, one element at a time, without ever changing a file you wrote
 
 **Recent releases:**
 
+- [v0.2.1](https://github.com/prisant-labs/nonfiction-studio/releases/tag/v0.2.1) (Oct 2026): Removes a Stop hook that sent Claude back to work at the end of every turn in every earlier release.
+- [v0.2.0](https://github.com/prisant-labs/nonfiction-studio/releases/tag/v0.2.0) (Oct 2026): Adds `nfs-adopt`, which brings in a manuscript you already started. A book created by 0.1.x needs one command after updating: `/nonfiction-studio:nfs-doctor migrate`.
 - [v0.1.1](https://github.com/prisant-labs/nonfiction-studio/releases/tag/v0.1.1) (Sep 2026): Skills that run a command-line tool, such as `nfs-quick-scan` and `nfs-tour`, now work after a marketplace install. The update does not touch your book's files.
-- [v0.1.0](https://github.com/prisant-labs/nonfiction-studio/releases/tag/v0.1.0) (Sep 2026): The first public release takes a book from intake interview to a fact-checked manuscript. For a first look, paste 500 to 1,000 words into `nfs-quick-scan` to get a measured voice profile.
 
-**Status:** the core authoring workflow is complete and is tested end to end in the Claude Code CLI on Ubuntu and Windows. Cowork should work the same way but is unverified, and in claude.ai chat only the skills run. Needs Node 22.12 or later.
+**Status:** the core authoring workflow is complete and is tested end to end in the Claude Code CLI on Ubuntu and Windows. Cowork and claude.ai chat cannot install the plugin as shipped, because it keeps its command-line tools in a top-level `bin/` folder; moving them is an open decision. Needs Node 22.12 or later.
 
 ---
 
@@ -176,11 +183,11 @@ Add one marketplace, and every Prisant Labs plugin becomes a one-line install, i
 
 **Recent catalog changes:**
 
-- [Sep 25, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-09-25): [nonfiction-studio](https://github.com/prisant-labs/nonfiction-studio) moved to v0.1.1, which lets its command-line skills find their own tools after a marketplace install. Run `/plugin update nonfiction-studio@prisant-labs` to get it.
-- [Sep 24, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-09-24): nonfiction-studio became installable with `/plugin install nonfiction-studio@prisant-labs`, now that its repository is public.
-- [Aug 28, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-08-28): prisant-utilities moved to v0.5.0, so `plab-spec` and `plab-release-plan` start when you ask for them in plain words.
+- [Oct 19, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-19): The `prisant-utilities` entry is renamed to `prisant-powertools` and repinned to v0.9.0, following the plugin's own rename. Move an existing install with `/plugin install prisant-powertools@prisant-labs`, then `/plugin uninstall prisant-utilities@prisant-labs`.
+- [Oct 16, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-16): [nonfiction-studio](https://github.com/prisant-labs/nonfiction-studio) moved to v0.2.1, removing a Stop hook that sent Claude back to work at the end of every turn. Run `/plugin update nonfiction-studio@prisant-labs` to get it.
+- [Oct 13, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-13): nonfiction-studio moved to v0.2.0, adding `nfs-adopt` to bring in a manuscript you already started.
 
-**Status:** live. Both listed plugins, prisant-utilities and nonfiction-studio, install now.
+**Status:** live. Both listed plugins, prisant-powertools and nonfiction-studio, install now.
 
 ---
 
@@ -243,7 +250,7 @@ Try a note-taking method before you commit to it, or test a plugin against a vau
 
 ### 📑 [typora-plugin-outline-view](https://github.com/prisant-labs/typora-plugin-outline-view)
 
-*🟡 Beta · 🚀 Start here · 🆕 New · Typora on Windows and macOS*
+*🟡 Beta · 🚀 Start here · Typora on Windows and macOS*
 
 ![release](https://img.shields.io/github/v/release/prisant-labs/typora-plugin-outline-view?display_name=tag&style=flat-square) ![version on main](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/prisant-labs/typora-plugin-outline-view/main/src/manifest.json&query=%24.version&label=main&prefix=v&color=orange&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/typora-plugin-outline-view?style=flat-square)
 
@@ -260,9 +267,9 @@ Keep the Files panel open and still navigate by heading. Outline View puts a syn
 
 **Recent releases:**
 
-- [0.3.1](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.1) (Sep 2026): The settings window now shows your installed version beside the latest published one, plus a button that opens the plugin's local folder.
-- [0.3.0](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.0) (Sep 2026): Long outlines are easier to scan, with optional hierarchy guides and alternating row colors. A clickable current-path bar and a focus mode help you keep your place.
-- [0.2.1](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.2.1) (Sep 2026): The first public release puts a live heading outline in Typora's right dock, so the Files panel can stay open. You can select heading ranges and style each heading level.
+- [0.4.0](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.4.0) (Oct 2026): Outline View can now tell you when a newer version is available and update itself without leaving the outline, through a small update pill.
+- [0.3.2](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.2) (Sep 2026): Fixes two macOS problems: a heading's row no longer disappears while Typora shows its source, and outline navigation reliably scrolls the editor again.
+- [0.3.1](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.1) (Sep 2026): A compact masthead above the settings sections shows the author, your installed version, the latest version, and a shortcut to the plugin's local folder.
 
 **Status:** listed in Typora's Community Plugin marketplace. Supports Windows and macOS, and needs Community Plugin 2.10.21 or later.
 
@@ -270,7 +277,7 @@ Keep the Files panel open and still navigate by heading. Outline View puts a syn
 
 ### ⭐ [typora-plugin-favorite-folders-files](https://github.com/prisant-labs/typora-plugin-favorite-folders-files)
 
-*🟡 Beta · 🆕 New · Typora on Windows and macOS*
+*🟡 Beta · Typora on Windows and macOS*
 
 ![release](https://img.shields.io/github/v/release/prisant-labs/typora-plugin-favorite-folders-files?display_name=tag&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/typora-plugin-favorite-folders-files?style=flat-square)
 
@@ -288,10 +295,11 @@ Reach your favorite folders and Markdown files in one click. Favorites adds a Ty
 
 **Recent releases:**
 
-- [0.1.1](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.1.1) (Sep 2026): On Windows, the Recent list now sorts files and folders together by date. As a result, the Recently opened sort order works again.
-- [0.1.0](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.1.0) (Sep 2026): The first public release lets you save favorite files and folders, group them, and undo a removal. Search finds favorites and recent items by name or path.
+- [0.3.0](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.3.0) (Oct 2026): Add a Browse root with Typora's own folder picker, and move Home and Drives anywhere in your root list. Favorites, Recent, and Browse each get their own icon.
+- [0.2.0](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.2.0) (Oct 2026): Adds a Browse tab: a folder tree that starts at roots you choose and stays put while Typora's own file tree follows whatever you open elsewhere.
+- [0.1.4](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.1.4) (Oct 2026): Adds an update pill that offers a newer release, and fixes selected tabs and options that looked faded on gray-accent themes such as Typora's default.
 
-**Status:** an early release. Windows is the development platform, where it has been installed and used, though its full native test checklist is still in progress. macOS is supported but not yet tested natively, and the Recent list is Windows only. Needs Community Plugin 2.10.21 or later.
+**Status:** an early release. Windows is the development platform, where it has been installed and used, though its full native test checklist is still in progress. macOS is supported but less tested natively: Recent now works on both platforms, but Browse's macOS behavior is unconfirmed in Typora. Needs Community Plugin 2.10.21 or later.
 
 ---
 
@@ -357,6 +365,38 @@ See what is wrong with a messy audiobook library, and rehearse the tidy-up befor
 
 ---
 
+## 🌐 Web and site tools
+
+A browser-based tool for people who run a Starlight documentation site. New here? Start with [Starlight Visual Customizer](#-starlight-visual-customizer).
+
+### 🎨 [starlight-visual-customizer](https://github.com/prisant-labs/starlight-visual-customizer)
+
+*🟡 Beta · 🚀 Start here · Browser, no install*
+
+![release](https://img.shields.io/github/v/release/prisant-labs/starlight-visual-customizer?display_name=tag&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/starlight-visual-customizer?style=flat-square)
+
+**Get it:** open [the studio](https://projects.prisantlabs.com/starlight-visual-customizer/studio/) in your browser. Nothing to install.
+
+Give a [Starlight](https://starlight.astro.build/) documentation site its own look without hand-writing CSS. The studio previews every change on real Starlight pages, in both light and dark mode, and exports one stylesheet you add to your project.
+
+**What's inside:**
+
+- Nine presets covering typography, layout, and every major component, each one fully editable
+- A live preview on real Starlight pages: a style guide, a long document, a landing page, and the 404 page
+- Split view comparing light and dark mode side by side, with a WCAG contrast check
+- An Inspect mode that opens the right controls for whatever element you click
+- One-click export: copy a message for your coding agent, or download `theme.css` and the setup steps
+- No account and no backend; your theme stays in your browser until you export or share it
+
+**Recent releases:**
+
+- [v0.1.1](https://github.com/prisant-labs/starlight-visual-customizer/releases/tag/v0.1.1) (Oct 2026): The preview now targets Starlight 0.42.6. Every export from v0.1.0 still applies; export again only to name the newer version.
+- [v0.1.0](https://github.com/prisant-labs/starlight-visual-customizer/releases/tag/v0.1.0) (Oct 2026): The first release lets you design a Starlight theme on real pages and export it as one CSS file, with nine presets and a WCAG contrast check.
+
+**Status:** a working beta built for Starlight 0.42.6; a later Starlight release could change markup some styles rely on. Tested across Chromium, Firefox, and WebKit, though Safari itself is untested. Needs Node 22 to run locally.
+
+---
+
 ## 🧱 3D print models
 
 Parametric models you can print as they are or reshape in OpenSCAD. New here? Start with the [cable box](#-3d-cable-box-parametric-openscad).
@@ -380,9 +420,9 @@ Hide a desk's cable clutter in a box sized to your own setup. Print a preset as 
 
 **Recent releases:**
 
-- [v2.0.0-rc.3](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases/tag/v2.0.0-rc.3) (Aug 2026, release candidate): Side openings now start 5 mm above the floor, and `All_Openings_Up=0` restores the old shape. Magnetic lid retention, an edge fillet and chamfer, and a lid-removal relief are new opt-in options.
-- [v1.4.1](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases/tag/v1.4.1) (Aug 2026): All nine presets now live in one file, so pressing F3 in OpenSCAD lists them in the Customizer dropdown. Three preset configs that failed to load now work.
-- [v1.4.0](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases/tag/v1.4.0) (Aug 2026): Sliced boxes can join with snap-fit clips that flex to absorb print error. A missing BOSL2 library now stops with one clear message instead of an empty render.
+- [v2.0.0-rc.6](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases/tag/v2.0.0-rc.6) (Oct 2026, release candidate): The Gridfinity base now fits a standard baseplate with solid, support-free feet, and sliced seams interlock with a sawtooth joint so the halves stay level.
+- [v2.0.0-rc.5](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases/tag/v2.0.0-rc.5) (Oct 2026, release candidate): The lid now actually fits the box, fixing a fault present in every version back to v1.0.0, and sliced pieces sit flat on the bed instead of hanging on their floor clips.
+- [v2.0.0-rc.4](https://github.com/prisant-labs/3d-cable-box-parametric-openscad/releases/tag/v2.0.0-rc.4) (Oct 2026, release candidate): Eight small calibration coupons let you test-print individual fits, such as the lid and the Gridfinity base, before committing to a full box.
 
 **Status:** v1 is the stable release, and v2 is at the release-candidate stage. To customize a box, you need OpenSCAD 2021.01 or later with the BOSL2 library, or the standalone bundle attached to each release.
 
@@ -390,7 +430,7 @@ Hide a desk's cable clutter in a box sized to your own setup. Print a preset as 
 
 ### 🌱 [3d-yard-spike-parametric-openscad](https://github.com/prisant-labs/3d-yard-spike-parametric-openscad)
 
-*🟠 Pre-release · 🆕 New · OpenSCAD with BOSL2*
+*🟠 Pre-release · OpenSCAD with BOSL2*
 
 ![last commit](https://img.shields.io/github/last-commit/prisant-labs/3d-yard-spike-parametric-openscad?style=flat-square) ![license](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey?style=flat-square)
 
