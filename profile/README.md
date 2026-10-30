@@ -91,20 +91,20 @@ For people who work with Claude Code or Codex every day. New here? Start with [p
 
 Pick up tomorrow exactly where today's agent session stopped. These skills cover the work around the work. They close a session cleanly, turn raw thinking into a decision, and carry a feature from spec to a taggable release. The plugin was renamed from prisant-utilities to prisant-powertools; GitHub redirects the old links.
 
-**What's inside:** ten skills, all prefixed `plab-`, for Claude Code and Codex.
+**What's inside:** eleven skills, all prefixed `plab-`, for Claude Code and Codex.
 
 - `plab-wrap-session` and `plab-continue-session`: a matched pair that writes a structured session log, then resumes from it
 - `plab-strategy-brief` and `plab-guide`: turn a brain dump into a decision-ready analysis, or build a guide bundle (Markdown, an ADHD-formatted variant, a quick-reference HTML page, and a short PDF)
 - `plab-ai-review`: runs a structured peer review of a document with a second model
 - `plab-spec` and `plab-release-plan`: numbered, source-cited acceptance criteria, then a release plan that gates the tag
 - `plab-resolve-open-items`: walks through a session's open questions and decisions, and writes each answer back to its home document
-- `plab-init-project` and `plab-audit`: scaffold agent infrastructure into a repo, or audit one into a five-file bundle with a ranked roadmap (manual invocation only)
+- `plab-init-project`, `plab-audit`, and `plab-current-status`: scaffold agent infrastructure into a repo, audit one into a five-file bundle with a ranked roadmap, or write a dated status snapshot (manual invocation only)
 
 **Recent releases:**
 
+- [v0.10.1](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.10.1) (Oct 2026): The plugin's manifests now credit Prisant Labs and show the display name "Prisant Power Tools." No skill changed.
+- [v0.10.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.10.0) (Oct 2026): Adds `plab-current-status`, a manual-only skill that writes a dated, ranked status snapshot of a repository. Also adds a `--answered-since` option to `plab-resolve-open-items`'s backlog sweep.
 - [v0.9.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.9.0) (Oct 2026): The plugin is renamed from prisant-utilities to prisant-powertools. Move an existing install by installing `prisant-powertools@prisant-labs`, then uninstalling `prisant-utilities@prisant-labs`.
-- [v0.8.1](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.8.1) (Oct 2026): `plab-release-plan` returns to manual invocation only, and several `plab-wrap-session` bugs are fixed, including a crash on a non-UTF-8 byte on Windows.
-- [v0.8.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.8.0) (Oct 2026): Adds the tenth skill, `plab-resolve-open-items`, plus a `--backlog` sweep that walks every open item across the whole repository.
 
 **Status:** actively released, with frequent point releases. The marketplace sometimes pins one release behind the latest.
 
@@ -160,10 +160,10 @@ Move a project folder without orphaning its Claude Code history. Claude Code key
 
 **Recent changes (unreleased):**
 
-- [v1.0.0, unreleased](https://github.com/prisant-labs/agent-workspace-tools/blob/main/CHANGELOG.md#100---unreleased): A move carries a project's transcripts, history, and plugin state with it, and rolls back automatically if verification fails. New `archive` and `associate` commands keep old history from being lost.
+- [v1.0.0, unreleased](https://github.com/prisant-labs/agent-workspace-tools/blob/main/CHANGELOG.md#100---unreleased): A move carries a project's transcripts, history, and plugin state with it, and rolls back automatically if verification fails. A new `repair --drive-letter` command fixes history entries left behind when a drive letter changes.
 - [v0.1.0, never tagged](https://github.com/prisant-labs/agent-workspace-tools/blob/main/CHANGELOG.md#010---internal-milestone-not-tagged): `doctor` finds stale path references across your Claude Code install, and `scan` shows everything stored for one project. Both only read, and neither writes.
 
-**Status:** in active development. v1.0 is feature-complete but not yet tagged, so for now you build it from source with Rust. Windows only.
+**Status:** in active development, with an open v1 safety closeout. An adversarial audit found data-loss risks that are now fixed, but some checks are still incomplete, so for now you build it from source with Rust. Windows only.
 
 ---
 
@@ -183,9 +183,9 @@ Add one marketplace, and every Prisant Labs plugin becomes a one-line install, i
 
 **Recent catalog changes:**
 
+- [Oct 30, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-30): `prisant-powertools` is repinned to v0.10.1. The release only updates the plugin's own name and author credit; no skill changed.
+- [Oct 28, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-28): `prisant-powertools` is repinned to v0.10.0, adding `plab-current-status`, a manual skill that writes a dated status snapshot of a repository.
 - [Oct 19, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-19): The `prisant-utilities` entry is renamed to `prisant-powertools` and repinned to v0.9.0, following the plugin's own rename. Move an existing install with `/plugin install prisant-powertools@prisant-labs`, then `/plugin uninstall prisant-utilities@prisant-labs`.
-- [Oct 16, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-16): [nonfiction-studio](https://github.com/prisant-labs/nonfiction-studio) moved to v0.2.1, removing a Stop hook that sent Claude back to work at the end of every turn. Run `/plugin update nonfiction-studio@prisant-labs` to get it.
-- [Oct 13, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-13): nonfiction-studio moved to v0.2.0, adding `nfs-adopt` to bring in a manuscript you already started.
 
 **Status:** live. Both listed plugins, prisant-powertools and nonfiction-studio, install now.
 
@@ -267,9 +267,9 @@ Keep the Files panel open and still navigate by heading. Outline View puts a syn
 
 **Recent releases:**
 
+- [0.4.1](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.4.1) (Oct 2026): Fixes a thick double border on the left edge of the outline dock, visible in Windows dark mode.
 - [0.4.0](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.4.0) (Oct 2026): Outline View can now tell you when a newer version is available and update itself without leaving the outline, through a small update pill.
 - [0.3.2](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.2) (Sep 2026): Fixes two macOS problems: a heading's row no longer disappears while Typora shows its source, and outline navigation reliably scrolls the editor again.
-- [0.3.1](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.1) (Sep 2026): A compact masthead above the settings sections shows the author, your installed version, the latest version, and a shortcut to the plugin's local folder.
 
 **Status:** listed in Typora's Community Plugin marketplace. Supports Windows and macOS, and needs Community Plugin 2.10.21 or later.
 
@@ -357,11 +357,11 @@ See what is wrong with a messy audiobook library, and rehearse the tidy-up befor
 
 **Recent changes (unreleased):**
 
-- [v0.6.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#060---unreleased): A Duplicates screen compares copies byte by byte when you ask. It also finds copies when a book is split across many files.
+- [v0.6.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#060---unreleased): A Duplicates screen compares copies byte by byte and can archive duplicates as a real, undoable change. It also finds copies when a book is split across many files.
 - [v0.5.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#050---unreleased): The engine behind real changes arrived. It journals every change before acting, can undo a run fully or partly, and never deletes an audio file.
 - [v0.4.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#040---unreleased): The app gained its main screens, including a library home with covers and a plan preview that explains each change. You approve, reject, or defer each group of changes.
 
-**Status:** an alpha, not a finished tool. Scanning and rehearsing work today. Applying real changes isn't a complete loop yet. There are no releases or installers, so build it from source on Windows, following [RUNNING.md](https://github.com/prisant-labs/audiobook-organizer/blob/main/RUNNING.md) for the prerequisites.
+**Status:** an alpha, not a finished tool. Scanning, rehearsing, and duplicate resolution work today as a complete, undoable loop. The rest of applying real changes isn't a complete loop yet. There are no releases or installers, so build it from source on Windows, following [RUNNING.md](https://github.com/prisant-labs/audiobook-organizer/blob/main/RUNNING.md) for the prerequisites.
 
 ---
 
