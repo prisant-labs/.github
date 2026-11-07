@@ -33,7 +33,7 @@ Version badges on this page update themselves. Everything else is written by han
 
 ### Agent tooling
 
-- 🔧 **[prisant-powertools](#-prisant-powertools)** · 🟡 Beta · 🚀 Start here<br>Ten agent skills for session continuity, decision briefs, peer review, specs, and release planning
+- 🔧 **[prisant-powertools](#-prisant-powertools)** · 🟡 Beta · 🚀 Start here<br>Fourteen agent skills for session continuity, decision briefs, peer review, specs, usage audits, and shipping
 
 - 📚 **[nonfiction-studio](#-nonfiction-studio)** · 🟡 Beta<br>A Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript
 
@@ -57,12 +57,16 @@ Version badges on this page update themselves. Everything else is written by han
 
 - 🔄 **[repo-sync-tool](#-repo-sync-tool)** · 🟡 Beta · 🚀 Start here<br>A tray app that keeps cloned repos fresh without touching your work
 
+- 📌 **[windows-explorer-quickpane](#-windows-explorer-quickpane)** · 🟢 Stable · 🆕 New<br>A fork of QuickPane that puts pinned folders inside every File Explorer window
+
 - 🎧 **[audiobook-organizer](#-audiobook-organizer)** · 🟠 Pre-release<br>Scan an audiobook library and rehearse a tidy-up before anything moves
 
 
 ### Web and site tools
 
 - 🎨 **[starlight-visual-customizer](#-starlight-visual-customizer)** · 🟡 Beta · 🚀 Start here<br>Design a Starlight docs theme visually, then export one CSS file
+
+- 📖 **[repo-pages](#-repo-pages)** · 🟢 Stable · 🆕 New<br>Publish any git repository as a static website where every file is readable
 
 
 ### 3D print models
@@ -91,20 +95,20 @@ For people who work with Claude Code or Codex every day. New here? Start with [p
 
 Pick up tomorrow exactly where today's agent session stopped. These skills cover the work around the work. They close a session cleanly, turn raw thinking into a decision, and carry a feature from spec to a taggable release. The plugin was renamed from prisant-utilities to prisant-powertools; GitHub redirects the old links.
 
-**What's inside:** ten skills, all prefixed `plab-`, for Claude Code and Codex.
+**What's inside:** fourteen skills, all prefixed `plab-`, for Claude Code and Codex.
 
 - `plab-wrap-session` and `plab-continue-session`: a matched pair that writes a structured session log, then resumes from it
 - `plab-strategy-brief` and `plab-guide`: turn a brain dump into a decision-ready analysis, or build a guide bundle (Markdown, an ADHD-formatted variant, a quick-reference HTML page, and a short PDF)
 - `plab-ai-review`: runs a structured peer review of a document with a second model
-- `plab-spec` and `plab-release-plan`: numbered, source-cited acceptance criteria, then a release plan that gates the tag
+- `plab-spec` and `plab-release-plan`: numbered, source-cited acceptance criteria, then a release plan that gates the tag (the release plan is manual invocation only)
 - `plab-resolve-open-items`: walks through a session's open questions and decisions, and writes each answer back to its home document
-- `plab-init-project` and `plab-audit`: scaffold agent infrastructure into a repo, or audit one into a five-file bundle with a ranked roadmap (manual invocation only)
+- `plab-init-project`, `plab-audit`, `plab-current-status`, `plab-usage-audit`, `plab-project-pulse`, and `plab-ship`: scaffold agent infrastructure into a repo, audit one into a five-file bundle with a ranked roadmap, write a dated status snapshot, audit a week of your Claude Code usage, roll your repos into a weekly pulse, or document, verify, and merge finished branches (manual invocation only)
 
 **Recent releases:**
 
-- [v0.9.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.9.0) (Oct 2026): The plugin is renamed from prisant-utilities to prisant-powertools. Move an existing install by installing `prisant-powertools@prisant-labs`, then uninstalling `prisant-utilities@prisant-labs`.
-- [v0.8.1](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.8.1) (Oct 2026): `plab-release-plan` returns to manual invocation only, and several `plab-wrap-session` bugs are fixed, including a crash on a non-UTF-8 byte on Windows.
-- [v0.8.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.8.0) (Oct 2026): Adds the tenth skill, `plab-resolve-open-items`, plus a `--backlog` sweep that walks every open item across the whole repository.
+- [v0.13.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.13.0) (Nov 2026): Adds `plab-ship`, a manual skill that documents, verifies, screens, and merges finished branches in one pass. No existing skill changed.
+- [v0.12.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.12.0) (Nov 2026): `plab-wrap-session` now writes its log before it asks any question, so closing a terminal mid-question still leaves a complete log. `plab-project-pulse` also ranks work by readiness for a long autonomous run.
+- [v0.11.1](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.11.1) (Nov 2026): The session skills list the newest tags correctly again, because they no longer sort tag names as text. `plab-release-plan` now names a plan's final status with the word the schema accepts.
 
 **Status:** actively released, with frequent point releases. The marketplace sometimes pins one release behind the latest.
 
@@ -123,7 +127,7 @@ Pick up tomorrow exactly where today's agent session stopped. These skills cover
 
 Write a non-fiction book with Claude without losing track of what is true. Specialist subagents draft, every factual claim is tied to a source or marked unverified, and a quality gate decides when a chapter is done.
 
-**What's inside:** a Claude Code plugin with 14 skills, 8 subagents, and 9 command-line engines.
+**What's inside:** a Claude Code plugin with 15 skills, 8 subagents, and 9 command-line engines.
 
 - An intake interview that captures your book's thesis, audience, and voice, with the voice measured from your own writing
 - Research that builds an evidence ledger, and drafting that anchors every factual claim to it or tags it `[UNVERIFIED]`
@@ -160,7 +164,7 @@ Move a project folder without orphaning its Claude Code history. Claude Code key
 
 **Recent changes (unreleased):**
 
-- [v1.0.0, unreleased](https://github.com/prisant-labs/agent-workspace-tools/blob/main/CHANGELOG.md#100---unreleased): A move carries a project's transcripts, history, and plugin state with it, and rolls back automatically if verification fails. New `archive` and `associate` commands keep old history from being lost.
+- [v1.0.0, unreleased](https://github.com/prisant-labs/agent-workspace-tools/blob/main/CHANGELOG.md#100---unreleased): A move carries a project's transcripts, history, and plugin state with it, and rolls back automatically if verification fails. New `archive`, `associate`, and `repair` commands keep old history from being lost.
 - [v0.1.0, never tagged](https://github.com/prisant-labs/agent-workspace-tools/blob/main/CHANGELOG.md#010---internal-milestone-not-tagged): `doctor` finds stale path references across your Claude Code install, and `scan` shows everything stored for one project. Both only read, and neither writes.
 
 **Status:** in active development. v1.0 is feature-complete but not yet tagged, so for now you build it from source with Rust. Windows only.
@@ -183,9 +187,9 @@ Add one marketplace, and every Prisant Labs plugin becomes a one-line install, i
 
 **Recent catalog changes:**
 
-- [Oct 19, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-19): The `prisant-utilities` entry is renamed to `prisant-powertools` and repinned to v0.9.0, following the plugin's own rename. Move an existing install with `/plugin install prisant-powertools@prisant-labs`, then `/plugin uninstall prisant-utilities@prisant-labs`.
-- [Oct 16, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-16): [nonfiction-studio](https://github.com/prisant-labs/nonfiction-studio) moved to v0.2.1, removing a Stop hook that sent Claude back to work at the end of every turn. Run `/plugin update nonfiction-studio@prisant-labs` to get it.
-- [Oct 13, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-13): nonfiction-studio moved to v0.2.0, adding `nfs-adopt` to bring in a manuscript you already started.
+- [Nov 6, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-11-06): `prisant-powertools` is repinned to v0.13.0, adding `plab-ship`, a manual skill that documents, verifies, screens, and merges finished branches.
+- [Nov 3, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-11-03): `prisant-powertools` is repinned to v0.12.0. `plab-wrap-session` now writes its log first, and `plab-continue-session` no longer reports a pull request merged during a wrap as new work.
+- [Oct 30, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-30): `prisant-powertools` moves through three releases to v0.11.1, adding `plab-usage-audit` and `plab-project-pulse`. The entry also gains the display name Prisant Power Tools.
 
 **Status:** live. Both listed plugins, prisant-powertools and nonfiction-studio, install now.
 
@@ -267,9 +271,9 @@ Keep the Files panel open and still navigate by heading. Outline View puts a syn
 
 **Recent releases:**
 
+- [0.4.1](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.4.1) (Oct 2026): Fixes a thick line on the left edge of the outline dock, most visible with Windows in dark mode and a light Typora theme.
 - [0.4.0](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.4.0) (Oct 2026): Outline View can now tell you when a newer version is available and update itself without leaving the outline, through a small update pill.
 - [0.3.2](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.2) (Sep 2026): Fixes two macOS problems: a heading's row no longer disappears while Typora shows its source, and outline navigation reliably scrolls the editor again.
-- [0.3.1](https://github.com/prisant-labs/typora-plugin-outline-view/releases/tag/0.3.1) (Sep 2026): A compact masthead above the settings sections shows the author, your installed version, the latest version, and a shortcut to the plugin's local folder.
 
 **Status:** listed in Typora's Community Plugin marketplace. Supports Windows and macOS, and needs Community Plugin 2.10.21 or later.
 
@@ -287,17 +291,17 @@ Reach your favorite folders and Markdown files in one click. Favorites adds a Ty
 
 **What's inside:**
 
-- Favorites for files and folders, organized into groups, with Undo when you remove one
-- A live, read-only view of Typora's Recent list, split into Files and Folders tabs (Windows)
+- Favorites for any Markdown file or folder, organized into groups, with Undo when you remove one
+- A live, read-only view of Typora's Recent list, split into Files and Folders tabs
 - Tabbed or stacked layouts, custom, A to Z, or recently opened sorting, and search across names and paths
 - Click to open, Ctrl+click for a new window, and reveal in Explorer or Finder
 - Nothing on disk is ever moved, renamed, or deleted, and nothing is sent over the network
 
 **Recent releases:**
 
+- [0.4.0](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.4.0) (Nov 2026): Add Favorite can now save any Markdown file or folder, through Typora's own dialogs or a typed path. These additions have automated tests, but nobody has tried them in Typora yet.
 - [0.3.0](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.3.0) (Oct 2026): Add a Browse root with Typora's own folder picker, and move Home and Drives anywhere in your root list. Favorites, Recent, and Browse each get their own icon.
 - [0.2.0](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.2.0) (Oct 2026): Adds a Browse tab: a folder tree that starts at roots you choose and stays put while Typora's own file tree follows whatever you open elsewhere.
-- [0.1.4](https://github.com/prisant-labs/typora-plugin-favorite-folders-files/releases/tag/0.1.4) (Oct 2026): Adds an update pill that offers a newer release, and fixes selected tabs and options that looked faded on gray-accent themes such as Typora's default.
 
 **Status:** an early release. Windows is the development platform, where it has been installed and used, though its full native test checklist is still in progress. macOS is supported but less tested natively: Recent now works on both platforms, but Browse's macOS behavior is unconfirmed in Typora. Needs Community Plugin 2.10.21 or later.
 
@@ -305,7 +309,7 @@ Reach your favorite folders and Markdown files in one click. Favorites adds a Ty
 
 ## 💻 Desktop utilities
 
-Local-first Windows desktop apps built with Rust and Tauri. New here? Start with [repo-sync-tool](#-repo-sync-tool).
+Local-first Windows desktop apps. New here? Start with [repo-sync-tool](#-repo-sync-tool).
 
 ### 🔄 [repo-sync-tool](https://github.com/prisant-labs/repo-sync-tool)
 
@@ -331,6 +335,35 @@ Keep a whole library of cloned repos fresh without risking your work. RepoSync i
 - [v0.9.0](https://github.com/prisant-labs/repo-sync-tool/releases/tag/v0.9.0) (Jul 2026): The first release adds a tray menu that checks every repo at once, pauses all scheduled checks, and reopens recent repos. It also opens any repo's folder, terminal, editor, or GitHub page.
 
 **Status:** public beta. The current build is a pre-release with an unsigned Windows installer. Windows is supported and used daily. macOS is experimental and unsupported.
+
+---
+
+### 📌 [windows-explorer-quickpane](https://github.com/prisant-labs/windows-explorer-quickpane)
+
+*🟢 Stable · 🆕 New · Windows 10 and 11*
+
+![release](https://img.shields.io/github/v/release/prisant-labs/windows-explorer-quickpane?display_name=tag&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/windows-explorer-quickpane?style=flat-square)
+
+**Get it:** download the per-user installer from the [Releases page](https://github.com/prisant-labs/windows-explorer-quickpane/releases). It needs no administrator rights. Expect a SmartScreen warning, because the files are not code-signed.
+
+Keep your folders one click away inside File Explorer itself. This fork of [lso2/QuickPane](https://github.com/lso2/QuickPane) adds fixes that were first reported upstream, plus unit tests and CI.
+
+**What's inside:**
+
+- A pane of pinned folder groups and tabs, embedded in each Explorer window, floating beside it, or docked to a screen edge
+- Recent folders, drives, network shares, and WSL distros in the same pane
+- Support for Open and Save dialogs, including a starting folder for each app
+- Quick actions and custom commands, such as copying a path or opening a terminal
+- From this fork: Windows 11 tab support, a redesigned Settings window, and an update notice
+- Local storage only: groups are folders of shortcuts, settings are a JSON file, and no code is injected into Explorer
+
+**Recent releases:**
+
+- [v3.12.0.1](https://github.com/prisant-labs/windows-explorer-quickpane/releases/tag/v3.12.0.1) (Nov 2026): Uses far less memory with many pinned folders, and rebuilds the pane far faster. The About page also gains a What's new card.
+- [v3.12.0.0](https://github.com/prisant-labs/windows-explorer-quickpane/releases/tag/v3.12.0.0) (Nov 2026): Quick actions now extend to your own commands and to the files selected in Explorer. An update notice also tells you when a new version exists, and it never downloads anything.
+- [v3.11.0.2](https://github.com/prisant-labs/windows-explorer-quickpane/releases/tag/v3.11.0.2) (Nov 2026): Settings now looks and behaves like a page of the Windows 11 Settings app. The pane gains Quick actions and a color choice, and the dock gains a choice of monitor.
+
+**Status:** actively released. Recent changes were checked in Windows Sandbox and by unit tests, and a few issues stay open, such as QuickPane exiting after an Explorer restart. Each release carries checksums and a build provenance attestation.
 
 ---
 
@@ -367,7 +400,7 @@ See what is wrong with a messy audiobook library, and rehearse the tidy-up befor
 
 ## 🌐 Web and site tools
 
-A browser-based tool for people who run a Starlight documentation site. New here? Start with [Starlight Visual Customizer](#-starlight-visual-customizer).
+Tools for publishing on the web: a visual theme editor for Starlight documentation sites, and a static website for any git repository. New here? Start with [Starlight Visual Customizer](#-starlight-visual-customizer).
 
 ### 🎨 [starlight-visual-customizer](https://github.com/prisant-labs/starlight-visual-customizer)
 
@@ -397,6 +430,34 @@ Give a [Starlight](https://starlight.astro.build/) documentation site its own lo
 
 ---
 
+### 📖 [repo-pages](https://github.com/prisant-labs/repo-pages)
+
+*🟢 Stable · 🆕 New · GitHub Actions and GitHub Pages*
+
+![release](https://img.shields.io/github/v/release/prisant-labs/repo-pages?display_name=tag&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/repo-pages?style=flat-square)
+
+**Get it:** try the [live demo](https://projects.prisantlabs.com/repo-pages/), then publish a repository with the [four commands in the README](https://github.com/prisant-labs/repo-pages#publish-in-four-commands) or its [coding-agent prompt](https://github.com/prisant-labs/repo-pages#publish-with-a-coding-agent).
+
+Give any git repository a website without running a server or a frontend build. Every tracked file becomes readable, and the site rebuilds on every push.
+
+**What's inside:**
+
+- A GitHub Action that builds a repository with its full history and deploys it to GitHub Pages
+- A single-file viewer for Markdown, HTML, CSV, JSON, YAML, code, images, and PDF
+- A folder tree and New, Updated, Authors, and History tabs built from your commits
+- A generator that is one Python script, using only the standard library
+- Checks that refuse a private repository unless you allow it, plus a list of what each run published
+- Reader settings for theme, text size, row density, and tree sorting
+
+**Recent releases:**
+
+- [v1.0.1](https://github.com/prisant-labs/repo-pages/releases/tag/v1.0.1) (Nov 2026): Updates the bundled Markdown library, so hostile Markdown is less able to slow a reader's tab. A file that relies on certain parsing edge cases can render differently.
+- [v1.0.0](https://github.com/prisant-labs/repo-pages/releases/tag/v1.0.0) (Nov 2026): The first versioned release publishes a repository through one workflow file and a GitHub Action. A workflow on the action's major version picks up later releases on its next rebuild.
+
+**Status:** active, and the action, viewer, and generator all run the live demo. repo-pages publishes nearly every tracked file. A GitHub Pages site can be public even when its repository is private, so read the [FAQ](https://github.com/prisant-labs/repo-pages#-faq) before you deploy.
+
+---
+
 ## 🧱 3D print models
 
 Parametric models you can print as they are or reshape in OpenSCAD. New here? Start with the [cable box](#-3d-cable-box-parametric-openscad).
@@ -416,7 +477,7 @@ Hide a desk's cable clutter in a box sized to your own setup. Print a preset as 
 - Configurable openings on each wall, an optional wrap post, interior stabilizer fins, and floor cutouts
 - Optional Gridfinity interfaces
 - A slicing mode that splits the box to fit your print bed, then joins the pieces with tab or snap-fit seams
-- Nine ready-made presets with STLs, and a validation suite covering 65 scenarios
+- Nine ready-made presets with STLs, and a validation suite covering 118 scenarios
 
 **Recent releases:**
 
