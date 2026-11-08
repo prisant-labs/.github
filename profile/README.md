@@ -55,9 +55,9 @@ Version badges on this page update themselves. Everything else is written by han
 
 ### Desktop utilities
 
-- 🔄 **[repo-sync-tool](#-repo-sync-tool)** · 🟡 Beta · 🚀 Start here<br>A tray app that keeps cloned repos fresh without touching your work
+- 🔄 **[repo-sync-tool](#-repo-sync-tool)** · 🟡 Beta<br>A tray app that keeps cloned repos fresh without touching your work
 
-- 📌 **[windows-explorer-quickpane](#-windows-explorer-quickpane)** · 🟢 Stable · 🆕 New<br>A fork of QuickPane that puts pinned folders inside every File Explorer window
+- 📌 **[windows-explorer-quickpane](#-windows-explorer-quickpane)** · 🟢 Stable · 🚀 Start here · 🆕 New<br>A fork of QuickPane that puts pinned folders inside every File Explorer window
 
 - 🎧 **[audiobook-organizer](#-audiobook-organizer)** · 🟠 Pre-release<br>Scan an audiobook library and rehearse a tidy-up before anything moves
 
@@ -309,11 +309,11 @@ Reach your favorite folders and Markdown files in one click. Favorites adds a Ty
 
 ## 💻 Desktop utilities
 
-Local-first Windows desktop apps. New here? Start with [repo-sync-tool](#-repo-sync-tool).
+Local-first Windows desktop apps. New here? Start with [QuickPane](#-windows-explorer-quickpane).
 
 ### 🔄 [repo-sync-tool](https://github.com/prisant-labs/repo-sync-tool)
 
-*🟡 Beta · 🚀 Start here · Windows*
+*🟡 Beta · Windows*
 
 ![release](https://img.shields.io/github/v/release/prisant-labs/repo-sync-tool?display_name=tag&include_prereleases&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/repo-sync-tool?style=flat-square)
 
@@ -340,7 +340,7 @@ Keep a whole library of cloned repos fresh without risking your work. RepoSync i
 
 ### 📌 [windows-explorer-quickpane](https://github.com/prisant-labs/windows-explorer-quickpane)
 
-*🟢 Stable · 🆕 New · Windows 10 and 11*
+*🟢 Stable · 🚀 Start here · 🆕 New · Windows 10 and 11*
 
 ![release](https://img.shields.io/github/v/release/prisant-labs/windows-explorer-quickpane?display_name=tag&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/windows-explorer-quickpane?style=flat-square)
 
