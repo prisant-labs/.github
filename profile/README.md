@@ -33,7 +33,7 @@ Version badges on this page update themselves. Everything else is written by han
 
 ### Agent tooling
 
-- 🔧 **[prisant-powertools](#-prisant-powertools)** · 🟡 Beta · 🚀 Start here<br>Fourteen agent skills for session continuity, decision briefs, peer review, specs, usage audits, and shipping
+- 🔧 **[prisant-powertools](#-prisant-powertools)** · 🟡 Beta · 🚀 Start here<br>Fifteen agent skills for session continuity, decision briefs, peer review, specs, usage audits, shipping, and profile READMEs
 
 - 📚 **[nonfiction-studio](#-nonfiction-studio)** · 🟡 Beta<br>A Claude Code plugin that takes a non-fiction book from intake interview to fact-checked manuscript
 
@@ -57,7 +57,7 @@ Version badges on this page update themselves. Everything else is written by han
 
 - 🔄 **[repo-sync-tool](#-repo-sync-tool)** · 🟡 Beta<br>A tray app that keeps cloned repos fresh without touching your work
 
-- 📌 **[windows-explorer-quickpane](#-windows-explorer-quickpane)** · 🟢 Stable · 🚀 Start here · 🆕 New<br>A fork of QuickPane that puts pinned folders inside every File Explorer window
+- 📌 **[windows-explorer-powerpane](#-windows-explorer-powerpane)** · 🟢 Stable · 🚀 Start here · 🆕 New<br>A fork of QuickPane, renamed Explorer PowerPane, that puts pinned folders inside every File Explorer window
 
 - 🎧 **[audiobook-organizer](#-audiobook-organizer)** · 🟠 Pre-release<br>Scan an audiobook library and rehearse a tidy-up before anything moves
 
@@ -95,20 +95,20 @@ For people who work with Claude Code or Codex every day. New here? Start with [p
 
 Pick up tomorrow exactly where today's agent session stopped. These skills cover the work around the work. They close a session cleanly, turn raw thinking into a decision, and carry a feature from spec to a taggable release. The plugin was renamed from prisant-utilities to prisant-powertools; GitHub redirects the old links.
 
-**What's inside:** fourteen skills, all prefixed `plab-`, for Claude Code and Codex.
+**What's inside:** fifteen skills, all prefixed `plab-`, for Claude Code and Codex.
 
 - `plab-wrap-session` and `plab-continue-session`: a matched pair that writes a structured session log, then resumes from it
 - `plab-strategy-brief` and `plab-guide`: turn a brain dump into a decision-ready analysis, or build a guide bundle (Markdown, an ADHD-formatted variant, a quick-reference HTML page, and a short PDF)
 - `plab-ai-review`: runs a structured peer review of a document with a second model
 - `plab-spec` and `plab-release-plan`: numbered, source-cited acceptance criteria, then a release plan that gates the tag (the release plan is manual invocation only)
 - `plab-resolve-open-items`: walks through a session's open questions and decisions, and writes each answer back to its home document
-- `plab-init-project`, `plab-audit`, `plab-current-status`, `plab-usage-audit`, `plab-project-pulse`, and `plab-ship`: scaffold agent infrastructure into a repo, audit one into a five-file bundle with a ranked roadmap, write a dated status snapshot, audit a week of your Claude Code usage, roll your repos into a weekly pulse, or document, verify, and merge finished branches (manual invocation only)
+- `plab-init-project`, `plab-audit`, `plab-current-status`, `plab-usage-audit`, `plab-project-pulse`, `plab-ship`, and `plab-org-profile-readme`: scaffold agent infrastructure into a repo, audit one into a five-file bundle with a ranked roadmap, write a dated status snapshot, audit a week of your Claude Code usage, roll your repos into a weekly pulse, document, verify, and merge finished branches, or keep an organization's profile README current (all manual invocation only)
 
 **Recent releases:**
 
+- [v0.14.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.14.0) (Nov 2026): Adds `plab-org-profile-readme`, a skill that keeps a GitHub organization's profile README true to its public repositories and opens a pull request with the changes. Session wrap-ups now close with a summary of what was done and what is next.
 - [v0.13.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.13.0) (Nov 2026): Adds `plab-ship`, a manual skill that documents, verifies, screens, and merges finished branches in one pass. No existing skill changed.
 - [v0.12.0](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.12.0) (Nov 2026): `plab-wrap-session` now writes its log before it asks any question, so closing a terminal mid-question still leaves a complete log. `plab-project-pulse` also ranks work by readiness for a long autonomous run.
-- [v0.11.1](https://github.com/prisant-labs/prisant-powertools/releases/tag/v0.11.1) (Nov 2026): The session skills list the newest tags correctly again, because they no longer sort tag names as text. `plab-release-plan` now names a plan's final status with the word the schema accepts.
 
 **Status:** actively released, with frequent point releases. The marketplace sometimes pins one release behind the latest.
 
@@ -187,9 +187,9 @@ Add one marketplace, and every Prisant Labs plugin becomes a one-line install, i
 
 **Recent catalog changes:**
 
+- [Nov 12, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-11-12): `prisant-powertools` is repinned to v0.14.0, adding `plab-org-profile-readme`, a manual-only skill that keeps an organization's profile README current.
 - [Nov 6, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-11-06): `prisant-powertools` is repinned to v0.13.0, adding `plab-ship`, a manual skill that documents, verifies, screens, and merges finished branches.
 - [Nov 3, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-11-03): `prisant-powertools` is repinned to v0.12.0. `plab-wrap-session` now writes its log first, and `plab-continue-session` no longer reports a pull request merged during a wrap as new work.
-- [Oct 30, 2026](https://github.com/prisant-labs/agent-plugins/blob/main/CHANGELOG.md#2026-10-30): `prisant-powertools` moves through three releases to v0.11.1, adding `plab-usage-audit` and `plab-project-pulse`. The entry also gains the display name Prisant Power Tools.
 
 **Status:** live. Both listed plugins, prisant-powertools and nonfiction-studio, install now.
 
@@ -309,7 +309,7 @@ Reach your favorite folders and Markdown files in one click. Favorites adds a Ty
 
 ## 💻 Desktop utilities
 
-Local-first Windows desktop apps. New here? Start with [QuickPane](#-windows-explorer-quickpane).
+Local-first Windows desktop apps. New here? Start with [windows-explorer-powerpane](#-windows-explorer-powerpane).
 
 ### 🔄 [repo-sync-tool](https://github.com/prisant-labs/repo-sync-tool)
 
@@ -338,15 +338,15 @@ Keep a whole library of cloned repos fresh without risking your work. RepoSync i
 
 ---
 
-### 📌 [windows-explorer-quickpane](https://github.com/prisant-labs/windows-explorer-quickpane)
+### 📌 [windows-explorer-powerpane](https://github.com/prisant-labs/windows-explorer-powerpane)
 
 *🟢 Stable · 🚀 Start here · 🆕 New · Windows 10 and 11*
 
-![release](https://img.shields.io/github/v/release/prisant-labs/windows-explorer-quickpane?display_name=tag&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/windows-explorer-quickpane?style=flat-square)
+![release](https://img.shields.io/github/v/release/prisant-labs/windows-explorer-powerpane?display_name=tag&style=flat-square) ![license](https://img.shields.io/github/license/prisant-labs/windows-explorer-powerpane?style=flat-square)
 
-**Get it:** download the per-user installer from the [Releases page](https://github.com/prisant-labs/windows-explorer-quickpane/releases). It needs no administrator rights. Expect a SmartScreen warning, because the files are not code-signed.
+**Get it:** download the per-user installer from the [Releases page](https://github.com/prisant-labs/windows-explorer-powerpane/releases). It needs no administrator rights. Expect a SmartScreen warning, because the files are not code-signed.
 
-Keep your folders one click away inside File Explorer itself. This fork of [lso2/QuickPane](https://github.com/lso2/QuickPane) adds fixes that were first reported upstream, plus unit tests and CI.
+Keep your folders one click away inside File Explorer itself. This project began as a fork of [lso2/QuickPane](https://github.com/lso2/QuickPane) and was renamed Explorer PowerPane after becoming a separate product with its own releases, tests, and CI.
 
 **What's inside:**
 
@@ -359,11 +359,11 @@ Keep your folders one click away inside File Explorer itself. This fork of [lso2
 
 **Recent releases:**
 
-- [v3.12.0.1](https://github.com/prisant-labs/windows-explorer-quickpane/releases/tag/v3.12.0.1) (Nov 2026): Uses far less memory with many pinned folders, and rebuilds the pane far faster. The About page also gains a What's new card.
-- [v3.12.0.0](https://github.com/prisant-labs/windows-explorer-quickpane/releases/tag/v3.12.0.0) (Nov 2026): Quick actions now extend to your own commands and to the files selected in Explorer. An update notice also tells you when a new version exists, and it never downloads anything.
-- [v3.11.0.2](https://github.com/prisant-labs/windows-explorer-quickpane/releases/tag/v3.11.0.2) (Nov 2026): Settings now looks and behaves like a page of the Windows 11 Settings app. The pane gains Quick actions and a color choice, and the dock gains a choice of monitor.
+- [v4.0.0.1](https://github.com/prisant-labs/windows-explorer-powerpane/releases/tag/v4.0.0.1) (Nov 2026): Fixes a file dialog's search box being cut off when the pane sits inside it, and makes the width grip resize that dialog's own pane instead of every Explorer window's.
+- [v4.0.0.0](https://github.com/prisant-labs/windows-explorer-powerpane/releases/tag/v4.0.0.0) (Nov 2026): QuickPane is renamed Explorer PowerPane, with a new icon and its own data folder. The old repository address now redirects here.
+- [v3.13.0.1](https://github.com/prisant-labs/windows-explorer-powerpane/releases/tag/v3.13.0.1) (Nov 2026): PowerPane's own file and folder pickers now list your pins in their navigation pane, instead of getting a pane attached that did not follow a move or resize.
 
-**Status:** actively released. Recent changes were checked in Windows Sandbox and by unit tests, and a few issues stay open, such as QuickPane exiting after an Explorer restart. Each release carries checksums and a build provenance attestation.
+**Status:** actively released. Recent changes were checked in Windows Sandbox and by unit tests, and a few issues stay open, such as PowerPane exiting after an Explorer restart. Each release carries checksums and a build provenance attestation.
 
 ---
 
@@ -390,7 +390,7 @@ See what is wrong with a messy audiobook library, and rehearse the tidy-up befor
 
 **Recent changes (unreleased):**
 
-- [v0.6.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#060---unreleased): A Duplicates screen compares copies byte by byte when you ask. It also finds copies when a book is split across many files.
+- [v0.6.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#060---unreleased): A Duplicates screen compares copies byte by byte and lets you resolve duplicates into real, undoable changes. It also finds copies when a book is split across many files.
 - [v0.5.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#050---unreleased): The engine behind real changes arrived. It journals every change before acting, can undo a run fully or partly, and never deletes an audio file.
 - [v0.4.0, unreleased](https://github.com/prisant-labs/audiobook-organizer/blob/main/CHANGELOG.md#040---unreleased): The app gained its main screens, including a library home with covers and a plan preview that explains each change. You approve, reject, or defer each group of changes.
 
